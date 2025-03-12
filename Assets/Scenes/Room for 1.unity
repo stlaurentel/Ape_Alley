@@ -348,6 +348,10 @@ PrefabInstance:
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1466571889848206759, guid: 035c152a9fd8d9943b31ed9a6b936d60, type: 3}
+      propertyPath: orthographic size
+      value: 2.9453125
+      objectReference: {fileID: 0}
     - target: {fileID: 2179627163847359066, guid: 035c152a9fd8d9943b31ed9a6b936d60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -390,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3415987586886456525, guid: 035c152a9fd8d9943b31ed9a6b936d60, type: 3}
       propertyPath: m_Name
-      value: Main Camera
+      value: MainCamera
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
