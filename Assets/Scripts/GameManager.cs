@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviourPunCallbacks
             Debug.LogError("missing player prefab");
         } else
         {
+            Debug.LogFormat("Creating player {0}", PhotonNetwork.NickName);
             PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0f, 1f), Quaternion.identity, 0);
         }
     }

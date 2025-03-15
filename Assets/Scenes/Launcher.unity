@@ -1186,8 +1186,8 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1362504097 stripped
-Transform:
+--- !u!224 &1362504097 stripped
+RectTransform:
   m_CorrespondingSourceObject: {fileID: 2290390019646648922, guid: 9bf2a91fa064a0049a5a67c506f51d09, type: 3}
   m_PrefabInstance: {fileID: 9133862443617178582}
   m_PrefabAsset: {fileID: 0}
@@ -1796,11 +1796,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2290390019646648922, guid: 9bf2a91fa064a0049a5a67c506f51d09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.67
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2290390019646648922, guid: 9bf2a91fa064a0049a5a67c506f51d09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2290390019646648922, guid: 9bf2a91fa064a0049a5a67c506f51d09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1842,7 +1842,12 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4098496529683023124, guid: 9bf2a91fa064a0049a5a67c506f51d09, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 4098496529683023124, guid: 9bf2a91fa064a0049a5a67c506f51d09, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
