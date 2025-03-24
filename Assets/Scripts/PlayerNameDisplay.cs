@@ -2,22 +2,40 @@ using UnityEngine;
 using Photon.Pun;
 using TMPro;
 
-public class PlayerNameDisplay : MonoBehaviour
+public class PlayerNameDisplay : MonoBehaviourPunCallbacks
 {
-    public TMP_Text playerName;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private TextMeshProUGUI nameText;
+
+    void Awake()
     {
-        //if (PhotonView.)
-        //{
-        //    PhotonView.
-        //}
-        
+        // Find TextMeshPro if not assigned
+        if (nameText == null)
+        {
+            nameText = GetComponentInChildren<TextMeshProUGUI>();
+        }
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        // Ensure we have a valid PhotonView
+        if (photonView != null && nameText != null)
+        {
+            // Set the name based on the specific player's PhotonView
+            string playerName = photonView.Owner != null
+                ? photonView.Owner.NickName
+                : "Unknown Player";
+
+            // Set the name text
+            nameText.text = playerName;
+        }
+    }
+
     void Update()
     {
-        
+        // Optional: Rotate name to face forward direction of the player
+        if (nameText != null)
+        {
+            nameText.transform.rotation = transform.rotation;
+        }
     }
 }
