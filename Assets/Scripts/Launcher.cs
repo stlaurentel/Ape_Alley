@@ -33,7 +33,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         progressLabel.SetActive(false);
         controlPanel.SetActive(true);
-        
+
     }
 
     public void Connect()
@@ -55,7 +55,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public override void OnConnectedToMaster()
@@ -67,7 +67,7 @@ public class Launcher : MonoBehaviourPunCallbacks
             PhotonNetwork.JoinRandomRoom();
             isConnecting = false;
         }
-        
+
     }
 
     public override void OnDisconnected(DisconnectCause cause)
@@ -83,7 +83,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         Debug.Log("PUN Basics Tutorial/Launcher:OnJoinRandomFailed() was called by PUN. No random room available, so we create one.\nCalling: PhotonNetwork.CreateRoom");
 
         // #Critical: we failed to join a random room, maybe none exists or they are all full. No worries, we create a new room.
-        PhotonNetwork.CreateRoom(null, new RoomOptions {MaxPlayers = maxPlayersPerRoom});
+        PhotonNetwork.CreateRoom(null, new RoomOptions { MaxPlayers = maxPlayersPerRoom });
     }
 
     public override void OnJoinedRoom()

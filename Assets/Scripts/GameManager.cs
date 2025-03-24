@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviourPunCallbacks
         if (playerPrefab == null)
         {
             Debug.LogError("missing player prefab");
-        } else
+        }
+        else
         {
             Debug.LogFormat("Creating player {0}: {2} from {1}", PhotonNetwork.NickName, SceneManager.GetActiveScene(), this.playerPrefab.name);
             PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 0f, 1f), Quaternion.identity, 0);
@@ -27,7 +28,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     {
         SceneManager.LoadScene(0);
     }
-    
+
     public void LeaveRoom()
     {
         PhotonNetwork.LeaveRoom();
@@ -50,7 +51,7 @@ public class GameManager : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Debug.LogFormat("OnPlayerEnteredRoom() {0}", newPlayer.NickName); // not seen if you're the player connecting
-        
+
         if (PhotonNetwork.IsMasterClient)
         {
             Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
