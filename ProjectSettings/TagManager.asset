@@ -8,6 +8,7 @@ TagManager:
   - Wall
   - Paddle
   - Shed
+  - Door
   layers:
   - Default
   - TransparentFX

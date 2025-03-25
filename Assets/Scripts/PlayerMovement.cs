@@ -98,19 +98,26 @@ public class PlayerMovement : MonoBehaviourPun
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("within");
-        if (other.CompareTag("Shed"))
+        if (other.CompareTag("Door"))
         {
-            inShed = true;
-            Debug.Log("Player entered the shed.");
+            Door door = other.GetComponent<Door>();  // Get the Door component
+            if (door != null)  // Ensure the component exists
+            {
+                transform.position = new Vector2(door.x_coord, door.y_coord);
+                Debug.Log("Player entered a door.");
+            }
+            else
+            {
+                Debug.LogWarning("No Door component found on the object with the 'Door' tag.");
+            }
         }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Shed"))
+        if (other.CompareTag("Door"))
         {
-            inShed = false;
-            Debug.Log("Player left the shed.");
+            Debug.Log("Player left the door.");
         }
     }
 

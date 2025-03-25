@@ -199,6 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 2
   tilemap: {fileID: 0}
+  oob: {fileID: 0}
 --- !u!95 &7253854178962402223
 Animator:
   serializedVersion: 7
