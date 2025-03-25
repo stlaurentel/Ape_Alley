@@ -15,6 +15,9 @@ public class BreakoutMinigameTrigger : MonoBehaviour
     {   
         // get local playerobject
         localPlayer = GameObject.FindGameObjectWithTag("Player");
+        if (localPlayer == null) {
+            Debug.LogWarning("No player found");
+        }
         // get event system safely
         eventSystem = EventSystem.current;
         if (eventSystem == null) {
@@ -25,7 +28,7 @@ public class BreakoutMinigameTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && canLoadScene)
+        if ((Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Space))  && canLoadScene)
         {
             StartCoroutine(StartGameRoutine());
         }
@@ -56,7 +59,7 @@ public class BreakoutMinigameTrigger : MonoBehaviour
      private GameObject GetLocalPlayer()
     {
         // More reliable way to find local player in Photon
-        PhotonView[] photonViews = FindObjectsOfType<PhotonView>();
+        PhotonView[] photonViews = FindObjectsByType<PhotonView>(FindObjectsSortMode.None);
         foreach (PhotonView view in photonViews)
         {
             if (view.IsMine && view.CompareTag("Player"))
@@ -64,6 +67,7 @@ public class BreakoutMinigameTrigger : MonoBehaviour
                 return view.gameObject;
             }
         }
+        Debug.LogWarning("Local player not found");
         return null;
     }
 
