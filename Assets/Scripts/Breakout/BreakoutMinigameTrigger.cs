@@ -4,12 +4,13 @@ using UnityEngine.EventSystems;
 using Photon.Pun;
 using System.Collections;
 
-public class BreakoutMinigameTrigger : MonoBehaviour
+public class BreakoutMinigameTrigger : MonoBehaviourPun
 {
     public string minigameSceneName = "BreakoutMinigame";
     private EventSystem eventSystem;
     private GameObject localPlayer;
     private bool canLoadScene = true;
+    public bool isTouchingObject = false;
 
     void Start()
     {   
@@ -28,9 +29,33 @@ public class BreakoutMinigameTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.Keypad1) || Input.GetKeyDown(KeyCode.Space))  && canLoadScene)
+        if (Input.GetKeyDown(KeyCode.Space)  && canLoadScene)
         {
             StartCoroutine(StartGameRoutine());
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        PhotonView playerView = other.GetComponent<PhotonView>();
+        if (!playerView.IsMine) return; // local player
+        
+        if (other.CompareTag("BreakoutSpace")) // Tag your object as "Interactable"
+        {
+            isTouchingObject = true;
+            Debug.Log("Touching object!");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        PhotonView playerView = other.GetComponent<PhotonView>();
+        if (!playerView.IsMine) return;
+        
+        if (!other.CompareTag("BreakoutSpace"))
+        {
+            isTouchingObject = false;
+            Debug.Log("Stopped touching object.");
         }
     }
 
@@ -102,26 +127,11 @@ public class BreakoutMinigameTrigger : MonoBehaviour
         }
     }
 
-   /* private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player") && other.GetComponent<PhotonView>().IsMine) {
-            LoadMinigame();
-            PausePlayerMovement(other.gameObject);
-        }
-    } */
-
-   /* private void startgame()
-    {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if (player != null && player.GetComponent<PhotonView>().IsMine) {
-                LoadMinigame();
-                PausePlayerMovement(player);
-                }
-           
-    }
+   
 
     private void LoadMinigame() {
         SceneManager.LoadSceneAsync(minigameSceneName, LoadSceneMode.Additive);
-    } */
+    }
 
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created

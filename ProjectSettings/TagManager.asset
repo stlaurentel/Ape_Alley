@@ -9,6 +9,7 @@ TagManager:
   - Paddle
   - Shed
   - Door
+  - BreakoutSpace
   layers:
   - Default
   - TransparentFX

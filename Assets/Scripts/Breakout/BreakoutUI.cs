@@ -4,9 +4,9 @@ using Photon.Pun;
 
 public class BreakoutUI : MonoBehaviour
 {
-    public string minigameSceneName;
+    public string minigameSceneName = "BreakoutMinigame";
 
-   /* public void QuitMinigame() {
+    public void QuitMinigame() {
         SceneManager.UnloadSceneAsync(minigameSceneName);
         ResumePlayerMovement();
     }
@@ -27,5 +27,5 @@ public class BreakoutUI : MonoBehaviour
     void Update()
     {
         
-    } */
+    } 
 }
