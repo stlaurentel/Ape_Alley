@@ -9,13 +9,16 @@ public class PlayerMovement : MonoBehaviourPun
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Animator anim;
+    private bool inShed;
     public Tilemap tilemap;
+    public Tilemap oob;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        tilemap = tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
+        tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
+        oob = GameObject.Find("OOB").GetComponent<Tilemap>();
 
         if (!tilemap)
         {
@@ -59,8 +62,9 @@ public class PlayerMovement : MonoBehaviourPun
 
     void FixedUpdate()
     {
-        if (IsPlayerInsideTilemapBounds())
+        if (IsPlayerMovingIntoValidTile())
         {
+
             rb.MovePosition(rb.position + moveSpeed * Time.fixedDeltaTime * moveInput);
             //Debug.Log("in bounds");
         } else
@@ -71,13 +75,52 @@ public class PlayerMovement : MonoBehaviourPun
 
     private bool IsPlayerInsideTilemapBounds()
     {
-        // Get the Tilemap's bounds
         BoundsInt bounds = tilemap.cellBounds;
 
         // Convert player's world position to local position relative to the tilemap
         Vector3Int playerCellPosition = tilemap.WorldToCell(rb.position + moveSpeed * Time.fixedDeltaTime * moveInput);
 
-        // Check if the player is within the bounds of the tilemap
         return bounds.Contains(playerCellPosition);
     }
+
+    private bool IsPlayerMovingIntoValidTile()
+    {
+        Vector3Int targetCellPosition = tilemap.WorldToCell(rb.position + moveSpeed * Time.fixedDeltaTime * moveInput);
+
+        TileBase walkableTile = tilemap.GetTile(targetCellPosition);  // Tile in Tilemap
+        TileBase oobTile = oob.GetTile(targetCellPosition);    // Tile in OOB
+
+        // Allow movement if it's inside Tilemap but not in OOB
+        return walkableTile != null && oobTile == null;
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("within");
+        if (other.CompareTag("Shed"))
+        {
+            inShed = true;
+            Debug.Log("Player entered the shed.");
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Shed"))
+        {
+            inShed = false;
+            Debug.Log("Player left the shed.");
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Wall"))
+        {
+            Debug.Log("Wall collision");
+        }
+    }
+
+
 }
