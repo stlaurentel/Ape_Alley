@@ -4,11 +4,14 @@ using Photon.Pun;
 
 public class BreakoutUI : MonoBehaviour
 {
+    
     public string minigameSceneName = "BreakoutMinigame";
 
     public void QuitMinigame() {
         SceneManager.UnloadSceneAsync(minigameSceneName);
         ResumePlayerMovement();
+        BreakoutMinigameTrigger.Instance.canClickSpace = true;
+        Debug.Log("canClickSpace = true");
     }
 
     private void ResumePlayerMovement() {

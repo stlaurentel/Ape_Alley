@@ -6,14 +6,17 @@ using System.Collections;
 
 public class BreakoutMinigameTrigger : MonoBehaviourPun
 {
+    public static BreakoutMinigameTrigger Instance;
     public string minigameSceneName = "BreakoutMinigame";
     private EventSystem eventSystem;
     private GameObject localPlayer;
     private bool canLoadScene = true;
     public bool isTouchingObject = false;
+    public bool canClickSpace = true;
 
     void Start()
     {   
+        Instance = this;
         // get local playerobject
         localPlayer = GameObject.FindGameObjectWithTag("Player");
         if (localPlayer == null) {
@@ -29,8 +32,9 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)  && canLoadScene)
+        if (Input.GetKeyDown(KeyCode.Space)  && canLoadScene && canClickSpace)
         {
+            canClickSpace = false;
             StartCoroutine(StartGameRoutine());
         }
     }
