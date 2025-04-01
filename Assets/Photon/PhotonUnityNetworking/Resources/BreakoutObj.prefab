@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6529884468253230265}
   - component: {fileID: 3869279967660919835}
   m_Layer: 0
-  m_Name: Square(breakout object controller)
+  m_Name: BreakoutObj
   m_TagString: BreakoutSpace
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
