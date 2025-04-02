@@ -10,6 +10,7 @@ TagManager:
   - Shed
   - Door
   - BreakoutSpace
+  - Obstacle
   layers:
   - Default
   - TransparentFX
