@@ -5,6 +5,7 @@ public class BallController : MonoBehaviour
     public float speed = 5f;
     private Rigidbody2D rb;
     private Vector2 lastVelocity;
+    private float bottomBoundary = -5f;
 
     void Start()
     {
@@ -14,6 +15,9 @@ public class BallController : MonoBehaviour
 
     void Update() {
         lastVelocity = rb.linearVelocity;
+        if (transform.position.y < bottomBoundary) {
+            Destroy(gameObject);
+        }
     }
 
     void LaunchBall()

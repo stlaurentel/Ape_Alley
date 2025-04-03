@@ -11,6 +11,7 @@ TagManager:
   - Door
   - BreakoutSpace
   - Obstacle
+  - Ball
   layers:
   - Default
   - TransparentFX

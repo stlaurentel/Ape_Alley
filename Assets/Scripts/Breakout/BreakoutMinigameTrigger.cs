@@ -11,8 +11,8 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     private EventSystem eventSystem;
     private GameObject localPlayer;
     private bool canLoadScene = true;
-    public bool isTouchingObject = false;
     public bool canClickSpace = true;
+    public bool touchingSpace = false;
 
     void Start()
     {   
@@ -32,36 +32,13 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)  && canLoadScene && canClickSpace)
+        if (Input.GetKeyDown(KeyCode.Space)  && canLoadScene && canClickSpace && touchingSpace)
         {
             canClickSpace = false;
             StartCoroutine(StartGameRoutine());
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        PhotonView playerView = other.GetComponent<PhotonView>();
-        if (!playerView.IsMine) return; // local player
-        
-        if (other.CompareTag("BreakoutSpace")) // Tag your object as "Interactable"
-        {
-            isTouchingObject = true;
-            Debug.Log("Touching object!");
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        PhotonView playerView = other.GetComponent<PhotonView>();
-        if (!playerView.IsMine) return;
-        
-        if (!other.CompareTag("BreakoutSpace"))
-        {
-            isTouchingObject = false;
-            Debug.Log("Stopped touching object.");
-        }
-    }
 
     private IEnumerator StartGameRoutine()
     {

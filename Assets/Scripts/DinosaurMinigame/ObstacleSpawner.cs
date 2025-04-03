@@ -8,6 +8,8 @@ public class ObstacleSpawner : MonoBehaviour
 
     private float nextSpawnTime;
 
+    public GameObject[] cactusPrefabs;
+
     void Update()
     {
         if (Time.time > nextSpawnTime) {
@@ -18,6 +20,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     void SpawnCactus() {
         Vector2 spawnPos = new Vector2(10f, fixedYSpawn);
-        Instantiate(cactusPrefab, spawnPos, Quaternion.identity);
+        int randomIndex = Random.Range(0, cactusPrefabs.Length);
+        Instantiate(cactusPrefabs[randomIndex], spawnPos, Quaternion.identity);
     }
 }

@@ -111,6 +111,10 @@ public class PlayerMovement : MonoBehaviourPun
                 Debug.LogWarning("No Door component found on the object with the 'Door' tag.");
             }
         }
+        if (other.CompareTag("BreakoutSpace")) {
+            BreakoutMinigameTrigger.Instance.touchingSpace = true;
+            Debug.Log("Touching BreakoutSpace");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

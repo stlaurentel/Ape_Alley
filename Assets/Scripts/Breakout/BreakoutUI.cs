@@ -1,11 +1,15 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
+using UnityEngine.UI;
+using System.Collections;
 
 public class BreakoutUI : MonoBehaviour
 {
-    
     public string minigameSceneName = "BreakoutMinigame";
+    public GameObject winTextUI; 
+    public GameObject loseTextUI;
+    private bool gameEnded = false;
 
     public void QuitMinigame() {
         SceneManager.UnloadSceneAsync(minigameSceneName);
@@ -20,15 +24,51 @@ public class BreakoutUI : MonoBehaviour
             localPlayer.GetComponent<PlayerMovement>().enabled = true;
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    private IEnumerator WinGameCoroutine()
     {
+        if (winTextUI != null)
+        {
+            winTextUI.SetActive(true); // Show the win UI
+        }
         
+        yield return new WaitForSeconds(5f); // Wait for 5 seconds
+        
+        QuitMinigame();
     }
 
-    // Update is called once per frame
+    private IEnumerator LoseGameCoroutine()
+    {
+        if (loseTextUI != null)
+        {
+            loseTextUI.SetActive(true); // Show the win UI
+        }
+        
+        yield return new WaitForSeconds(5f); // Wait for 5 seconds
+        
+        QuitMinigame();
+    }
+
+    void Start() {
+        if (winTextUI != null) {
+            winTextUI.SetActive(false);
+        }
+        if (loseTextUI != null) {
+            loseTextUI.SetActive(false);
+        }
+    }
+
     void Update()
     {
-        
+        if (!gameEnded && GameObject.FindGameObjectWithTag("Brick") == null) 
+        {
+            gameEnded = true;
+            StartCoroutine(WinGameCoroutine());
+        }
+        if (!gameEnded && GameObject.FindGameObjectWithTag("Ball") == null) 
+        {
+            gameEnded = true;
+            StartCoroutine(LoseGameCoroutine());
+    }
     } 
 }
