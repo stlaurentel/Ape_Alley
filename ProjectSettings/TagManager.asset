@@ -10,13 +10,14 @@ TagManager:
   - Shed
   - Door
   - BreakoutSpace
+  - Inventory
   - Obstacle
   - Ball
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Clothing
   - Water
   - UI
   - Boundary
@@ -46,6 +47,12 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: UI
+    uniqueID: 1413315367
+    locked: 0
+  - name: Clothing
+    uniqueID: 3025007787
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

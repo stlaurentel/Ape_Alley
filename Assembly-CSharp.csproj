@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\DinosaurMinigame\ObstacleSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\AppSettingsExtensions.cs" />
+    <Compile Include="Assets\Scripts\CustomizePlayer.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChannelSelector.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\DinosaurMinigame\CactusMovement.cs" />
@@ -77,6 +78,7 @@
     <Compile Include="Assets\Scripts\PlayerNameDisplay.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerNameInputField.cs" />
+    <Compile Include="Assets\Scripts\AnimationSync.cs" />
     <Compile Include="Assets\Scripts\DinosaurMinigame\DinoController.cs" />
     <Compile Include="Assets\Scripts\Breakout\BallController.cs" />
     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
