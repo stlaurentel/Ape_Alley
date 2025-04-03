@@ -822,6 +822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b5438f85018a3c418ccd929001d0ca1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scriptA: {fileID: 6529884468253230265, guid: dff0b403082c5a8468c90be5e7d972d9, type: 3}
   minigameSceneName: BreakoutMinigame
 --- !u!1 &115277998
 GameObject:
