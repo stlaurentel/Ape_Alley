@@ -8,15 +8,36 @@ public class PlayerMovement : MonoBehaviourPun
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    private Animator anim;
-    private bool inShed;
+
+    private Animator playerAnimator;
+    private Animator eyePatchAnimator;
+
     public Tilemap tilemap;
     public Tilemap oob;
+
+    public bool canMove = true;
+
+    private CustomizePlayer customization;
+
+    // clothing here
+    public GameObject EyewearSlot;
+    public GameObject inventory;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+
+        playerAnimator = GetComponent<Animator>();
+        eyePatchAnimator = transform.Find("EyewearSlot").GetComponent<Animator>();
+        print(eyePatchAnimator);
+        if (eyePatchAnimator != null)
+        {
+            eyePatchAnimator.Play("eyepatch_down"); // Ensure it starts with an animation
+            print("playing eyepatch_down");
+        }
+
+        customization = GetComponent<CustomizePlayer>();
+
         tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
         oob = GameObject.Find("OOB").GetComponent<Tilemap>();
 
@@ -34,29 +55,59 @@ public class PlayerMovement : MonoBehaviourPun
 
     void Update()
     {
+        var ePress = Input.GetKeyDown(KeyCode.E);
+        var oPress = Input.GetKeyDown(KeyCode.O);
+
+        if (oPress && EyewearSlot != null)
+        {
+            EyewearSlot.SetActive(!EyewearSlot.activeInHierarchy);
+            customization.ToggleEyepatch();
+        }
+
+        if (ePress)
+        {
+            inventory.SetActive(!inventory.activeInHierarchy);
+
+            if (inventory.activeInHierarchy) {
+                canMove = false;
+            } else
+            {
+                canMove = true;
+            }
+        }
+
+        if (!canMove) return;
+
         moveInput.x = Input.GetAxisRaw("Horizontal");
         moveInput.y = Input.GetAxisRaw("Vertical");
 
         moveInput.Normalize(); // Ensures diagonal movement isn't faster
 
+        // this is going to be shrunk down & placed in its own function
+        // just have it like this to test the separate animators
         if (moveInput.y > 0)
         {
-            anim.SetInteger("facing", 1);
+            playerAnimator.SetInteger("facing", 1);
+            eyePatchAnimator.SetInteger("facing", 1);
         }
         else if (moveInput.y < 0)
         {
-            anim.SetInteger("facing", 2);
+            playerAnimator.SetInteger("facing", 2);
+            eyePatchAnimator.SetInteger("facing", 2);
         }
         else if (moveInput.x > 0)
         {
-            anim.SetInteger("facing", 3);
+            playerAnimator.SetInteger("facing", 3);
+            eyePatchAnimator.SetInteger("facing", 3);
         }
         else if (moveInput.x < 0)
         {
-            anim.SetInteger("facing", 4);
+            playerAnimator.SetInteger("facing", 4);
+            eyePatchAnimator.SetInteger("facing", 4);
         } else
         {
-            anim.SetInteger("facing", 0);
+            playerAnimator.SetInteger("facing", 0);
+            eyePatchAnimator.SetInteger("facing", 0);
         }
     }
 
@@ -71,16 +122,6 @@ public class PlayerMovement : MonoBehaviourPun
         {
             Debug.Log("Out of bounds");
         }
-    }
-
-    private bool IsPlayerInsideTilemapBounds()
-    {
-        BoundsInt bounds = tilemap.cellBounds;
-
-        // Convert player's world position to local position relative to the tilemap
-        Vector3Int playerCellPosition = tilemap.WorldToCell(rb.position + moveSpeed * Time.fixedDeltaTime * moveInput);
-
-        return bounds.Contains(playerCellPosition);
     }
 
     private bool IsPlayerMovingIntoValidTile()
