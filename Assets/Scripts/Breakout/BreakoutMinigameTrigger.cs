@@ -14,6 +14,8 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     public bool canClickSpace = true;
     public bool touchingSpace = false;
 
+    public GameObject triggerCanvas;
+
     void Start()
     {   
         Instance = this;
@@ -36,6 +38,11 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
         {
             canClickSpace = false;
             StartCoroutine(StartGameRoutine());
+        }
+
+        if (triggerCanvas.activeInHierarchy && !touchingSpace)
+        {
+            triggerCanvas.SetActive(false);
         }
     }
 

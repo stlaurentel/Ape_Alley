@@ -178,8 +178,9 @@ public class PlayerMovement : MonoBehaviourPun
         
         if (other.CompareTag("BreakoutSpace")) {
             BreakoutMinigameTrigger.Instance.touchingSpace = true;
-            BreakoutInteractionText.Instance.touchingSpace = true;
             Debug.Log("Touching BreakoutSpace");
+
+            BreakoutMinigameTrigger.Instance.triggerCanvas.SetActive(true);
         }
     }
 
@@ -191,7 +192,6 @@ public class PlayerMovement : MonoBehaviourPun
         }
         if (other.CompareTag("BreakoutSpace")) {
             BreakoutMinigameTrigger.Instance.touchingSpace = false;
-            BreakoutInteractionText.Instance.touchingSpace = false;
             Debug.Log("Off BreakoutSpace");
         }
     }
