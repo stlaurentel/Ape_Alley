@@ -1,10 +1,12 @@
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.Tilemaps;
+using TMPro;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviourPun
 {
+
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -24,7 +26,7 @@ public class PlayerMovement : MonoBehaviourPun
     public GameObject inventory;
 
     void Start()
-    {
+    {   
         rb = GetComponent<Rigidbody2D>();
 
         playerAnimator = GetComponent<Animator>();
@@ -154,6 +156,7 @@ public class PlayerMovement : MonoBehaviourPun
         }
         if (other.CompareTag("BreakoutSpace")) {
             BreakoutMinigameTrigger.Instance.touchingSpace = true;
+            BreakoutInteractionText.Instance.touchingSpace = true;
             Debug.Log("Touching BreakoutSpace");
         }
     }
@@ -163,6 +166,11 @@ public class PlayerMovement : MonoBehaviourPun
         if (other.CompareTag("Door"))
         {
             Debug.Log("Player left the door.");
+        }
+        if (other.CompareTag("BreakoutSpace")) {
+            BreakoutMinigameTrigger.Instance.touchingSpace = false;
+            BreakoutInteractionText.Instance.touchingSpace = false;
+            Debug.Log("Off BreakoutSpace");
         }
     }
 

@@ -78,8 +78,9 @@
     <Compile Include="Assets\Scripts\PlayerNameDisplay.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatAppIdCheckerUI.cs" />
     <Compile Include="Assets\Scripts\PlayerNameInputField.cs" />
-    <Compile Include="Assets\Scripts\AnimationSync.cs" />
+    <Compile Include="Assets\Scripts\Breakout\BreakoutInteractionText.cs" />
     <Compile Include="Assets\Scripts\DinosaurMinigame\DinoController.cs" />
+    <Compile Include="Assets\Scripts\AnimationSync.cs" />
     <Compile Include="Assets\Scripts\Breakout\BallController.cs" />
     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PlayerAnimator.cs" />
+    <Compile Include="Assets\Scripts\PlayerUIManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\EventSystemSpawner.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextButtonTransition.cs" />
     <Compile Include="Assets\Scripts\Breakout\BreakoutGameController.cs" />

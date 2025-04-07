@@ -35,6 +35,8 @@ public class BreakoutUI : MonoBehaviour
         yield return new WaitForSeconds(5f); // Wait for 5 seconds
         
         QuitMinigame();
+        PlayerUIManager.Instance.UpdateBananaCounter(1);
+        PlayerUIManager.Instance.ShowMessage("You've collected your first banana! Press [E] to open your inventory!");
     }
 
     private IEnumerator LoseGameCoroutine()
@@ -65,10 +67,14 @@ public class BreakoutUI : MonoBehaviour
             gameEnded = true;
             StartCoroutine(WinGameCoroutine());
         }
-        if (!gameEnded && GameObject.FindGameObjectWithTag("Ball") == null) 
+        if (!gameEnded && GameObject.FindGameObjectWithTag("Ball") == null && BreakoutGameManager.Instance.score < 300) 
         {
             gameEnded = true;
             StartCoroutine(LoseGameCoroutine());
-    }
+        }
+        else if (!gameEnded && GameObject.FindGameObjectWithTag("Ball") == null && BreakoutGameManager.Instance.score > 300){
+            gameEnded = true;
+            StartCoroutine(WinGameCoroutine());
+        }
     } 
 }
