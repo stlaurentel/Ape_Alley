@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class AnimationSync : MonoBehaviour
 {
-    public Animator playerAnimator;  // Reference to the player's Animator
-    public Animator glassesAnimator; // Reference to the glasses' Animator
+    public Animator playerAnimator;
+
+    // turn this into a list
+    public Animator glassesAnimator;
+    public Animator clownHatAnimator;
 
     void Update()
     {
@@ -14,6 +17,12 @@ public class AnimationSync : MonoBehaviour
 
             // Apply the same "facing" value to the glasses Animator
             glassesAnimator.SetInteger("facing", facingValue);
+        }
+
+        if (playerAnimator != null && glassesAnimator != null)
+        {
+            int facingValue = playerAnimator.GetInteger("facing");
+            clownHatAnimator.SetInteger("facing", facingValue);
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - BreakoutSpace
   - Inventory
   - Obstacle
+  - Item
   - Ball
   layers:
   - Default

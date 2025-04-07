@@ -44,6 +44,7 @@ MonoBehaviour:
   - UpdateNameText
   - UpdatePlayerNameText
   - RPC_ToggleEyepatch
+  - RPC_ToggleClownHat
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
