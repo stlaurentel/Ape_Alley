@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 {
     [Tooltip("The prefab to use for representing the player")]
     public GameObject playerPrefab;
+    public GameObject uiCanvasPrefab;
+    public Vector2 uiOffset = new Vector2(0,1f);
 
     // Keep track of the local player instance
     private GameObject localPlayerInstance;
@@ -53,6 +55,13 @@ public class GameManager : MonoBehaviourPunCallbacks
 
         // Instantiate the player
         localPlayerInstance = PhotonNetwork.Instantiate(this.playerPrefab.name, spawnPosition, Quaternion.identity, 0);
+        GameObject uiCanvas = Instantiate(uiCanvasPrefab);
+        uiCanvas.transform.SetParent(localPlayerInstance.transform);
+        uiCanvas.transform.localPosition = (Vector3)uiOffset;
+        uiCanvas.transform.localRotation = Quaternion.identity;
+        PlayerUIManager uiManager = uiCanvas.GetComponent<PlayerUIManager>();
+        uiManager.messagePanel.SetActive(false);
+        if (uiManager != null) uiManager.Initialize(localPlayerInstance.transform);
 
         // Set a custom property to indicate player is loaded and ready
         ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable

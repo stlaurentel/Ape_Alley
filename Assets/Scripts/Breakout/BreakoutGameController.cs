@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class BreakoutGameManager : MonoBehaviour {
     public static BreakoutGameManager Instance;
     public Text scoreText;
-    private int score;
+    public int score;
 
     void Awake() {
         if (Instance == null) Instance = this;
