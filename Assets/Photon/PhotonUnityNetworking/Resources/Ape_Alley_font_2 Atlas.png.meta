@@ -1,0 +1,2280 @@
+fileFormatVersion: 2
+guid: af736e962109b7e42957a11703199ffc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5451953229577725974
+    second: Ape_Alley_font_2 Atlas_0
+  - first:
+      213: 8217877962900496165
+    second: Ape_Alley_font_2 Atlas_1
+  - first:
+      213: -435964532309166920
+    second: Ape_Alley_font_2 Atlas_2
+  - first:
+      213: -4116011929655852929
+    second: Ape_Alley_font_2 Atlas_3
+  - first:
+      213: 7051438882674100782
+    second: Ape_Alley_font_2 Atlas_4
+  - first:
+      213: -8207029588441845727
+    second: Ape_Alley_font_2 Atlas_5
+  - first:
+      213: -3043011779982574616
+    second: Ape_Alley_font_2 Atlas_6
+  - first:
+      213: -7319284655871351063
+    second: Ape_Alley_font_2 Atlas_7
+  - first:
+      213: -7716590125002266793
+    second: Ape_Alley_font_2 Atlas_8
+  - first:
+      213: 5787636363222016446
+    second: Ape_Alley_font_2 Atlas_9
+  - first:
+      213: -1256798493453819768
+    second: Ape_Alley_font_2 Atlas_10
+  - first:
+      213: 1392582623391849737
+    second: Ape_Alley_font_2 Atlas_11
+  - first:
+      213: -8288624512361268454
+    second: Ape_Alley_font_2 Atlas_12
+  - first:
+      213: -8661435648527693074
+    second: Ape_Alley_font_2 Atlas_13
+  - first:
+      213: -3751437909188589254
+    second: Ape_Alley_font_2 Atlas_14
+  - first:
+      213: 4187419772655569325
+    second: Ape_Alley_font_2 Atlas_15
+  - first:
+      213: -1401924864180654432
+    second: Ape_Alley_font_2 Atlas_16
+  - first:
+      213: -853609299658101991
+    second: Ape_Alley_font_2 Atlas_17
+  - first:
+      213: -4151427350298575539
+    second: Ape_Alley_font_2 Atlas_18
+  - first:
+      213: -5528778191470231993
+    second: Ape_Alley_font_2 Atlas_19
+  - first:
+      213: -5496794859671663353
+    second: Ape_Alley_font_2 Atlas_20
+  - first:
+      213: 1972289742009288661
+    second: Ape_Alley_font_2 Atlas_21
+  - first:
+      213: -3088728110716148451
+    second: Ape_Alley_font_2 Atlas_22
+  - first:
+      213: 8063077100671187910
+    second: Ape_Alley_font_2 Atlas_23
+  - first:
+      213: 5340806408218304655
+    second: Ape_Alley_font_2 Atlas_24
+  - first:
+      213: -244496478463597846
+    second: Ape_Alley_font_2 Atlas_25
+  - first:
+      213: 1600191488804313544
+    second: Ape_Alley_font_2 Atlas_26
+  - first:
+      213: 5117117647275525772
+    second: Ape_Alley_font_2 Atlas_27
+  - first:
+      213: 8155946270804020083
+    second: Ape_Alley_font_2 Atlas_28
+  - first:
+      213: -6087034596123462879
+    second: Ape_Alley_font_2 Atlas_29
+  - first:
+      213: -1984706950220803278
+    second: Ape_Alley_font_2 Atlas_30
+  - first:
+      213: -9189430273158387129
+    second: Ape_Alley_font_2 Atlas_31
+  - first:
+      213: -114977506075620963
+    second: Ape_Alley_font_2 Atlas_32
+  - first:
+      213: 3539093341062943813
+    second: Ape_Alley_font_2 Atlas_33
+  - first:
+      213: -9081097659266063523
+    second: Ape_Alley_font_2 Atlas_34
+  - first:
+      213: -8718302880813576883
+    second: Ape_Alley_font_2 Atlas_35
+  - first:
+      213: 568958122585277612
+    second: Ape_Alley_font_2 Atlas_36
+  - first:
+      213: -7349845957509986821
+    second: Ape_Alley_font_2 Atlas_37
+  - first:
+      213: -6969894940784432428
+    second: Ape_Alley_font_2 Atlas_38
+  - first:
+      213: -637590903884939802
+    second: Ape_Alley_font_2 Atlas_39
+  - first:
+      213: 6849368510229852683
+    second: Ape_Alley_font_2 Atlas_40
+  - first:
+      213: 7965949866412031706
+    second: Ape_Alley_font_2 Atlas_41
+  - first:
+      213: 3956402007194633317
+    second: Ape_Alley_font_2 Atlas_42
+  - first:
+      213: -6447495793568770577
+    second: Ape_Alley_font_2 Atlas_43
+  - first:
+      213: -8762048965570155111
+    second: Ape_Alley_font_2 Atlas_44
+  - first:
+      213: 4685663501306288353
+    second: Ape_Alley_font_2 Atlas_45
+  - first:
+      213: -6575447647831469402
+    second: Ape_Alley_font_2 Atlas_46
+  - first:
+      213: -6624341533370552935
+    second: Ape_Alley_font_2 Atlas_47
+  - first:
+      213: -1249730729013346551
+    second: Ape_Alley_font_2 Atlas_48
+  - first:
+      213: -3003834253560772051
+    second: Ape_Alley_font_2 Atlas_49
+  - first:
+      213: -7542891212480297891
+    second: Ape_Alley_font_2 Atlas_50
+  - first:
+      213: 9184065053277292711
+    second: Ape_Alley_font_2 Atlas_51
+  - first:
+      213: 4101776657125367291
+    second: Ape_Alley_font_2 Atlas_52
+  - first:
+      213: 7991969799381928824
+    second: Ape_Alley_font_2 Atlas_53
+  - first:
+      213: -3305168851026203678
+    second: Ape_Alley_font_2 Atlas_54
+  - first:
+      213: -1579286130517427326
+    second: Ape_Alley_font_2 Atlas_55
+  - first:
+      213: 7761395123106809948
+    second: Ape_Alley_font_2 Atlas_56
+  - first:
+      213: 6085522433346262348
+    second: Ape_Alley_font_2 Atlas_57
+  - first:
+      213: -2075401682963440839
+    second: Ape_Alley_font_2 Atlas_58
+  - first:
+      213: 5396466889433571341
+    second: Ape_Alley_font_2 Atlas_59
+  - first:
+      213: 3963899840674173784
+    second: Ape_Alley_font_2 Atlas_60
+  - first:
+      213: 7841204219455952032
+    second: Ape_Alley_font_2 Atlas_61
+  - first:
+      213: -5922696049468712778
+    second: Ape_Alley_font_2 Atlas_62
+  - first:
+      213: -9117394523925689991
+    second: Ape_Alley_font_2 Atlas_63
+  - first:
+      213: 1585871596702444106
+    second: Ape_Alley_font_2 Atlas_64
+  - first:
+      213: -3821958088031314392
+    second: Ape_Alley_font_2 Atlas_65
+  - first:
+      213: -1093269519856610879
+    second: Ape_Alley_font_2 Atlas_66
+  - first:
+      213: -7253900661202029547
+    second: Ape_Alley_font_2 Atlas_67
+  - first:
+      213: 4865806816301677180
+    second: Ape_Alley_font_2 Atlas_68
+  - first:
+      213: -8636995146536014436
+    second: Ape_Alley_font_2 Atlas_69
+  - first:
+      213: -1250958725514250269
+    second: Ape_Alley_font_2 Atlas_70
+  - first:
+      213: -3046992416345318970
+    second: Ape_Alley_font_2 Atlas_71
+  - first:
+      213: 6572691919262383943
+    second: Ape_Alley_font_2 Atlas_72
+  - first:
+      213: 8554610490367475799
+    second: Ape_Alley_font_2 Atlas_73
+  - first:
+      213: -441601480795403712
+    second: Ape_Alley_font_2 Atlas_74
+  - first:
+      213: -8043364898450513202
+    second: Ape_Alley_font_2 Atlas_75
+  - first:
+      213: -8309376268689177402
+    second: Ape_Alley_font_2 Atlas_76
+  - first:
+      213: 8591785183469785121
+    second: Ape_Alley_font_2 Atlas_77
+  - first:
+      213: 5875397162771397978
+    second: Ape_Alley_font_2 Atlas_78
+  - first:
+      213: 1305201347688814000
+    second: Ape_Alley_font_2 Atlas_79
+  - first:
+      213: -6694277181931245720
+    second: Ape_Alley_font_2 Atlas_80
+  - first:
+      213: 1402974430707741668
+    second: Ape_Alley_font_2 Atlas_81
+  - first:
+      213: 1535916463349105637
+    second: Ape_Alley_font_2 Atlas_82
+  - first:
+      213: 3499852627991367647
+    second: Ape_Alley_font_2 Atlas_83
+  - first:
+      213: 885017331159415748
+    second: Ape_Alley_font_2 Atlas_84
+  - first:
+      213: -4240097369210521809
+    second: Ape_Alley_font_2 Atlas_85
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 618260d939a39ab40800000000000000
+      internalID: 5451953229577725974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 110
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fd1329774cb0270800000000000000
+      internalID: 8217877962900496165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 110
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b4fa05519423f9f0800000000000000
+      internalID: -435964532309166920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 114
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f70c79125fcf0e6c0800000000000000
+      internalID: -4116011929655852929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 92
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2aca2dbd4ebbd160800000000000000
+      internalID: 7051438882674100782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 88
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120bdcf6216ca1e80800000000000000
+      internalID: -8207029588441845727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 88
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb3fce98ec05c5d0800000000000000
+      internalID: -3043011779982574616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 88
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e622dc726dac6a90800000000000000
+      internalID: -7319284655871351063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 70
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757e3f16a2a29e490800000000000000
+      internalID: -7716590125002266793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 92
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb16bfeab90d15050800000000000000
+      internalID: 5787636363222016446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 66
+        width: 14
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8806073dd64fe8ee0800000000000000
+      internalID: -1256798493453819768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d17ab8482735310800000000000000
+      internalID: 1392582623391849737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 66
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1b7c18cbe3e8fc80800000000000000
+      internalID: -8288624512361268454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 66
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea0a9cfa266cc780800000000000000
+      internalID: -8661435648527693074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 66
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3941e9f81730fbc0800000000000000
+      internalID: -3751437909188589254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 66
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da9059ae814bc1a30800000000000000
+      internalID: 4187419772655569325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 66
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae69b483cc5b8ce0800000000000000
+      internalID: -1401924864180654432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 64
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ba8e45dde5724f0800000000000000
+      internalID: -853609299658101991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 42
+        width: 12
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4dbc92f1da2366c0800000000000000
+      internalID: -4151427350298575539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 66
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e7d7f0785d543b0800000000000000
+      internalID: -5528778191470231993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 66
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70dc31ac23677b3b0800000000000000
+      internalID: -5496794859671663353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 70
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d74c9a121bfe5b10800000000000000
+      internalID: 1972289742009288661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 76
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d152009e522a225d0800000000000000
+      internalID: -3088728110716148451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 58
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cbb71e27edc5ef60800000000000000
+      internalID: 8063077100671187910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 72
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f806bf7a12b5e1a40800000000000000
+      internalID: 5340806408218304655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 44
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae2e75c8fbf5b9cf0800000000000000
+      internalID: -244496478463597846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 44
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9d8ce4ea5053610800000000000000
+      internalID: 1600191488804313544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 44
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c868db77367a30740800000000000000
+      internalID: 5117117647275525772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b0276dbedbf2170800000000000000
+      internalID: 8155946270804020083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 44
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1233c8a0942868ba0800000000000000
+      internalID: -6087034596123462879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_30
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 44
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23317d05b87e474e0800000000000000
+      internalID: -1984706950220803278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_31
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 44
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74a6c20bad5987080800000000000000
+      internalID: -9189430273158387129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_32
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 44
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d99c3314194876ef0800000000000000
+      internalID: -114977506075620963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_33
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 42
+        width: 10
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 544d10d84a26d1130800000000000000
+      internalID: 3539093341062943813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_34
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 58
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d53a0d8eac579f180800000000000000
+      internalID: -9081097659266063523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_35
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 44
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4d87d0b8bd520780800000000000000
+      internalID: -8718302880813576883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_36
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 58
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4c4c4e56855e700800000000000000
+      internalID: 568958122585277612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_37
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 44
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf5c6c4fa0a100a90800000000000000
+      internalID: -7349845957509986821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_38
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 44
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4da60ccba75f54f90800000000000000
+      internalID: -6969894940784432428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_39
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 58
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6edfae57372d627f0800000000000000
+      internalID: -637590903884939802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_40
+      rect:
+        serializedVersion: 2
+        x: 172
+        y: 58
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b023ffbde58dd0f50800000000000000
+      internalID: 6849368510229852683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_41
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 44
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ade3f06b23dbc8e60800000000000000
+      internalID: 7965949866412031706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_42
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 58
+        width: 24
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5648a73e9a6f7e630800000000000000
+      internalID: 3956402007194633317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_43
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe5128d6cb4e586a0800000000000000
+      internalID: -6447495793568770577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_44
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99dac9e93e2f66680800000000000000
+      internalID: -8762048965570155111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_45
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8df54f022d60140800000000000000
+      internalID: 4685663501306288353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_46
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 44
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2d3d7d3315fb4a0800000000000000
+      internalID: -6575447647831469402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_47
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 44
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99de490097c9114a0800000000000000
+      internalID: -6624341533370552935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 22
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ff448f58018aee0800000000000000
+      internalID: -1249730729013346551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_49
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 22
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2a0c5059ac3056d0800000000000000
+      internalID: -3003834253560772051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 22
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5442bcf764425790800000000000000
+      internalID: -7542891212480297891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_51
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 22
+        width: 12
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a80ca6b18a547f70800000000000000
+      internalID: 9184065053277292711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_52
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 22
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfd52f333207ce830800000000000000
+      internalID: 4101776657125367291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_53
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 22
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87b4fc3703e29ee60800000000000000
+      internalID: 7991969799381928824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_54
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 28
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eba5e7017ea122d0800000000000000
+      internalID: -3305168851026203678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_55
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 0
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28bbec7b1af351ae0800000000000000
+      internalID: -1579286130517427326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_56
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 22
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c580b3a2eb306bb60800000000000000
+      internalID: 7761395123106809948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_57
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 20
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c455640296e147450800000000000000
+      internalID: 6085522433346262348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_58
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 22
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b57b05a21b233e0800000000000000
+      internalID: -2075401682963440839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_59
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 22
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0068d25b0a14ea40800000000000000
+      internalID: 5396466889433571341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_60
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8539c9847e9920730800000000000000
+      internalID: 3963899840674173784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_61
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a457ff61bd81dc60800000000000000
+      internalID: 7841204219455952032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_62
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8dec2a25b5ecda0800000000000000
+      internalID: -5922696049468712778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_63
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 979415c8cf1887180800000000000000
+      internalID: -9117394523925689991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_64
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4aa4dc90d5220610800000000000000
+      internalID: 1585871596702444106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_65
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82e56785e5da5fac0800000000000000
+      internalID: -3821958088031314392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_66
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c15f210a2de3d0f0800000000000000
+      internalID: -1093269519856610879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_67
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 22
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514f41d08c7f45b90800000000000000
+      internalID: -7253900661202029547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_68
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 22
+        width: 8
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7af55fe481d68340800000000000000
+      internalID: 4865806816301677180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_69
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9da2fbccaa332880800000000000000
+      internalID: -8636995146536014436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_70
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e73c01caa3b3aee0800000000000000
+      internalID: -1250958725514250269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_71
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c99d6e7a88e6b5d0800000000000000
+      internalID: -3046992416345318970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_72
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ff6b91a74e63b50800000000000000
+      internalID: 6572691919262383943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_73
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7500f2eaae418b670800000000000000
+      internalID: 8554610490367475799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_74
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04a47ecfacd1fd9f0800000000000000
+      internalID: -441601480795403712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_75
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 0
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2e20d8d3a306090800000000000000
+      internalID: -8043364898450513202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_76
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c488bffe4a2fac80800000000000000
+      internalID: -8309376268689177402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_77
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1205e276a172c3770800000000000000
+      internalID: 8591785183469785121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_78
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5db351279a998150800000000000000
+      internalID: 5875397162771397978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_79
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b55a51e5b10d1210800000000000000
+      internalID: 1305201347688814000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_80
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86f2cfeee562913a0800000000000000
+      internalID: -6694277181931245720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_81
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e37a4bbfcd587310800000000000000
+      internalID: 1402974430707741668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_82
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e30992c2eba05510800000000000000
+      internalID: 1535916463349105637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_83
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf84a11c69f19030800000000000000
+      internalID: 3499852627991367647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_84
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 0
+        width: 14
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb32dbd296384c00800000000000000
+      internalID: 885017331159415748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ape_Alley_font_2 Atlas_85
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 6
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f27732f58e52825c0800000000000000
+      internalID: -4240097369210521809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

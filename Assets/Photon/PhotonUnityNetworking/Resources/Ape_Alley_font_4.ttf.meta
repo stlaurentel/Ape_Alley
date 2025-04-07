@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3becf62c8f1325540b2ec5f26f5d9126
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: 3
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Ape_Alley_font
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9cffca77e68636a4c91c8d47265da01f, type: 3}
+  customCharacters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ$<>%&|abcdefghijklmnopqrstuvwxyz;`{}@+1234567890_:!?.,\"'#-^*~=()[]/\\\u25A1\u2026\u200B"
+  fontRenderingMode: 2
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
