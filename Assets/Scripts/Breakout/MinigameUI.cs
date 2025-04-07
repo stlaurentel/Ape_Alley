@@ -4,11 +4,10 @@ using Photon.Pun;
 using UnityEngine.UI;
 using System.Collections;
 
-public class MinigameUI : MonoBehaviour
+public class BreakoutUI : MonoBehaviour
 {
     public string minigameSceneName = "BreakoutMinigame";
-    //public GameObject winTextUI; 
-    //public GameObject loseTextUI;
+
     public Text gameOverText;
 
     private bool gameEnd = false;
@@ -28,32 +27,6 @@ public class MinigameUI : MonoBehaviour
         }
     }
 
-    //private IEnumerator WinGameCoroutine()
-    //{
-    //    if (winTextUI != null)
-    //    {
-    //        winTextUI.SetActive(true); // Show the win UI
-    //    }
-        
-    //    yield return new WaitForSeconds(5f); // Wait for 5 seconds
-        
-    //    QuitMinigame();
-    //    PlayerUIManager.Instance.UpdateBananaCounter(1);
-    //    PlayerUIManager.Instance.ShowMessage("You've collected your first banana! Press [E] to open your inventory!");
-    //}
-
-    //private IEnumerator LoseGameCoroutine()
-    //{
-    //    if (loseTextUI != null)
-    //    {
-    //        loseTextUI.SetActive(true); // Show the win UI
-    //    }
-        
-    //    yield return new WaitForSeconds(5f); // Wait for 5 seconds
-        
-    //    QuitMinigame();
-    //}
-
     private IEnumerator EndGameCoroutine()
     {
         if (gameWin)
@@ -63,8 +36,6 @@ public class MinigameUI : MonoBehaviour
         {
             gameOverText.text = "YOU    LOSE!";
         }
-
-        //gameOverText.SetActive(true);
 
         yield return new WaitForSeconds(5f);
 
@@ -78,37 +49,20 @@ public class MinigameUI : MonoBehaviour
 
     }
 
-    void Start() {
-        //if (winTextUI != null) {
-        //    winTextUI.SetActive(false);
-        //}
-        //if (loseTextUI != null) {
-        //    loseTextUI.SetActive(false);
-        //}
-
-        //if (gameOverText != null)
-        //{
-        //    gameOverText.SetActive(false);
-        //}
-    }
-
     void Update()
     {
         if (!gameEnd && GameObject.FindGameObjectWithTag("Brick") == null) 
         {
             gameEnd = true;
             gameWin = true;
-            //StartCoroutine(WinGameCoroutine());
         }
         if (!gameEnd && GameObject.FindGameObjectWithTag("Ball") == null && GameObject.FindGameObjectWithTag("Brick") != null) 
         {
             gameEnd = true;
-            //StartCoroutine(LoseGameCoroutine());
         }
         else if (!gameEnd && GameObject.FindGameObjectWithTag("Ball") == null){
             gameEnd = true;
             gameWin = true;
-            //StartCoroutine(WinGameCoroutine());
         }
 
         if (gameEnd)

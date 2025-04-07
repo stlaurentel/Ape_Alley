@@ -71,6 +71,7 @@
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\DinosaurMinigame\DinoGameManager.cs" />
     <Compile Include="Assets\Scripts\PopupBubble.cs" />
+    <Compile Include="Assets\Scripts\Breakout\MinigameUI.cs" />
     <Compile Include="Assets\Scripts\PlayerManager.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\ChatGui.cs" />
     <Compile Include="Assets\Scripts\PlayerNameDisplay.cs" />
