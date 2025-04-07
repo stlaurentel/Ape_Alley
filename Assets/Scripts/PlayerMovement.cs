@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviourPun
 
     private Animator playerAnimator;
     private Animator eyePatchAnimator;
+    private Animator clownHatAnimator;
 
     public Tilemap tilemap;
     public Tilemap oob;
@@ -18,17 +19,22 @@ public class PlayerMovement : MonoBehaviourPun
     public bool canMove = true;
 
     private CustomizePlayer customization;
+    private PlayerInventory inventory;
+    public GameObject popupBubble;
 
     // clothing here
     public GameObject EyewearSlot;
-    public GameObject inventory;
+    public GameObject inventoryCanvas;
 
     void Start()
     {
+        inventory = transform.Find("PlayerInventory").GetComponent<PlayerInventory>();
+
         rb = GetComponent<Rigidbody2D>();
 
         playerAnimator = GetComponent<Animator>();
         eyePatchAnimator = transform.Find("EyewearSlot").GetComponent<Animator>();
+        clownHatAnimator = transform.Find("ClownHatSlot").GetComponent<Animator>();
         print(eyePatchAnimator);
         if (eyePatchAnimator != null)
         {
@@ -51,6 +57,7 @@ public class PlayerMovement : MonoBehaviourPun
         {
             enabled = false;
         }
+
     }
 
     void Update()
@@ -66,9 +73,9 @@ public class PlayerMovement : MonoBehaviourPun
 
         if (ePress)
         {
-            inventory.SetActive(!inventory.activeInHierarchy);
+            inventoryCanvas.SetActive(!inventoryCanvas.activeInHierarchy);
 
-            if (inventory.activeInHierarchy) {
+            if (inventoryCanvas.activeInHierarchy) {
                 canMove = false;
             } else
             {
@@ -89,25 +96,30 @@ public class PlayerMovement : MonoBehaviourPun
         {
             playerAnimator.SetInteger("facing", 1);
             eyePatchAnimator.SetInteger("facing", 1);
+            clownHatAnimator.SetInteger("facing", 1);
         }
         else if (moveInput.y < 0)
         {
             playerAnimator.SetInteger("facing", 2);
             eyePatchAnimator.SetInteger("facing", 2);
+            clownHatAnimator.SetInteger("facing", 2);
         }
         else if (moveInput.x > 0)
         {
             playerAnimator.SetInteger("facing", 3);
             eyePatchAnimator.SetInteger("facing", 3);
+            clownHatAnimator.SetInteger("facing", 3);
         }
         else if (moveInput.x < 0)
         {
             playerAnimator.SetInteger("facing", 4);
             eyePatchAnimator.SetInteger("facing", 4);
+            clownHatAnimator.SetInteger("facing", 4);
         } else
         {
             playerAnimator.SetInteger("facing", 0);
             eyePatchAnimator.SetInteger("facing", 0);
+            clownHatAnimator.SetInteger("facing", 0);
         }
     }
 
@@ -152,6 +164,17 @@ public class PlayerMovement : MonoBehaviourPun
                 Debug.LogWarning("No Door component found on the object with the 'Door' tag.");
             }
         }
+
+        if (other.CompareTag("Item"))
+        {
+            Debug.Log("Player is touching an obtainable item.");
+            Item item = other.GetComponent<Item>();
+            if (!inventory.HasItem(item.name))
+            {
+                inventory.AddItem(item.name, item.sprite);
+                CreateBubblePopup("Collected " + item.name + "!", rb.position);
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -170,5 +193,11 @@ public class PlayerMovement : MonoBehaviourPun
         }
     }
 
+    public void CreateBubblePopup(string message, Vector3 position)
+    {
+        GameObject bubble = Instantiate(popupBubble, position, Quaternion.identity);
+        PopupBubble popup = bubble.GetComponent<PopupBubble>();
+        popup.Show(message);
+    }
 
 }

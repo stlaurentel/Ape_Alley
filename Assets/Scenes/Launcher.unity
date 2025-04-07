@@ -1775,11 +1775,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885918745114957337, guid: 035c152a9fd8d9943b31ed9a6b936d60, type: 3}
       propertyPath: m_RefResolutionX
-      value: 512
+      value: 640
       objectReference: {fileID: 0}
     - target: {fileID: 6885918745114957337, guid: 035c152a9fd8d9943b31ed9a6b936d60, type: 3}
       propertyPath: m_RefResolutionY
-      value: 256
+      value: 360
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

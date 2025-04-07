@@ -165,6 +165,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -709,7 +722,31 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      DinoSprites - doux_0: -1193820911090328509
+      DinoSprites - doux_1: -4782104476085066544
+      DinoSprites - doux_10: -779620069307929898
+      DinoSprites - doux_11: -4973719480991979858
+      DinoSprites - doux_12: -856149755822829703
+      DinoSprites - doux_13: 9005231359350743733
+      DinoSprites - doux_14: -3062889640021937877
+      DinoSprites - doux_15: 2344094080979329109
+      DinoSprites - doux_16: 6187166469564620892
+      DinoSprites - doux_17: 5790736894352482622
+      DinoSprites - doux_18: 1017339619195510989
+      DinoSprites - doux_19: 2435977642620248713
+      DinoSprites - doux_2: 5457486430018742753
+      DinoSprites - doux_20: -2169900482024534249
+      DinoSprites - doux_21: 5122917098507624081
+      DinoSprites - doux_22: 3715301444612607779
+      DinoSprites - doux_23: -1725305482119995535
+      DinoSprites - doux_3: -6998530912514391803
+      DinoSprites - doux_4: 3980471565588570874
+      DinoSprites - doux_5: -1273391385274323691
+      DinoSprites - doux_6: -4508140695509116639
+      DinoSprites - doux_7: 5167926156991472794
+      DinoSprites - doux_8: -5589726636969511265
+      DinoSprites - doux_9: 6843668749568235812
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

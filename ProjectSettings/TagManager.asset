@@ -12,6 +12,7 @@ TagManager:
   - BreakoutSpace
   - Inventory
   - Obstacle
+  - Item
   layers:
   - Default
   - TransparentFX
