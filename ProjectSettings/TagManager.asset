@@ -13,6 +13,7 @@ TagManager:
   - Inventory
   - Obstacle
   - Item
+  - Ball
   layers:
   - Default
   - TransparentFX

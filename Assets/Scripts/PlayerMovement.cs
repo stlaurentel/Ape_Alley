@@ -175,6 +175,12 @@ public class PlayerMovement : MonoBehaviourPun
                 CreateBubblePopup("Collected " + item.name + "!", rb.position);
             }
         }
+        
+        if (other.CompareTag("BreakoutSpace")) 
+        {
+            BreakoutMinigameTrigger.Instance.touchingSpace = true;
+            Debug.Log("Touching BreakoutSpace");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

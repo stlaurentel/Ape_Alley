@@ -10,7 +10,8 @@ public class DinoGameManager : MonoBehaviour
     
     void Start()
     {
-        InvokeRepeating("IncreaseScore", 1f, 0.5f);
+        InvokeRepeating("IncreaseScore", 1f, 0.1f);
+        gameOverPanel.SetActive(false);
     }
 
     void IncreaseScore() {
