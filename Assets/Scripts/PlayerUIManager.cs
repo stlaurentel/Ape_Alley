@@ -43,8 +43,6 @@ public class PlayerUIManager : MonoBehaviour
         messagePanel.SetActive(false);
         UpdateBananaCounter(0); 
 
-        bananaText.transform.localPosition = counterOffset;
-        messageText.transform.localPosition = counterOffset;
     }
 
     public void UpdateBananaCounter(int count) 
