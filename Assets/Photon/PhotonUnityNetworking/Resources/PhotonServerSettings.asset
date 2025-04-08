@@ -45,6 +45,8 @@ MonoBehaviour:
   - UpdatePlayerNameText
   - RPC_ToggleEyepatch
   - RPC_ToggleClownHat
+  - ReceiveMessage
+  - SyncChatLog
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

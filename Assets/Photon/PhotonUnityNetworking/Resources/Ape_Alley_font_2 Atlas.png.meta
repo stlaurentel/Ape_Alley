@@ -2272,7 +2272,93 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Ape_Alley_font_2 Atlas_0: 5451953229577725974
+      Ape_Alley_font_2 Atlas_1: 8217877962900496165
+      Ape_Alley_font_2 Atlas_10: -1256798493453819768
+      Ape_Alley_font_2 Atlas_11: 1392582623391849737
+      Ape_Alley_font_2 Atlas_12: -8288624512361268454
+      Ape_Alley_font_2 Atlas_13: -8661435648527693074
+      Ape_Alley_font_2 Atlas_14: -3751437909188589254
+      Ape_Alley_font_2 Atlas_15: 4187419772655569325
+      Ape_Alley_font_2 Atlas_16: -1401924864180654432
+      Ape_Alley_font_2 Atlas_17: -853609299658101991
+      Ape_Alley_font_2 Atlas_18: -4151427350298575539
+      Ape_Alley_font_2 Atlas_19: -5528778191470231993
+      Ape_Alley_font_2 Atlas_2: -435964532309166920
+      Ape_Alley_font_2 Atlas_20: -5496794859671663353
+      Ape_Alley_font_2 Atlas_21: 1972289742009288661
+      Ape_Alley_font_2 Atlas_22: -3088728110716148451
+      Ape_Alley_font_2 Atlas_23: 8063077100671187910
+      Ape_Alley_font_2 Atlas_24: 5340806408218304655
+      Ape_Alley_font_2 Atlas_25: -244496478463597846
+      Ape_Alley_font_2 Atlas_26: 1600191488804313544
+      Ape_Alley_font_2 Atlas_27: 5117117647275525772
+      Ape_Alley_font_2 Atlas_28: 8155946270804020083
+      Ape_Alley_font_2 Atlas_29: -6087034596123462879
+      Ape_Alley_font_2 Atlas_3: -4116011929655852929
+      Ape_Alley_font_2 Atlas_30: -1984706950220803278
+      Ape_Alley_font_2 Atlas_31: -9189430273158387129
+      Ape_Alley_font_2 Atlas_32: -114977506075620963
+      Ape_Alley_font_2 Atlas_33: 3539093341062943813
+      Ape_Alley_font_2 Atlas_34: -9081097659266063523
+      Ape_Alley_font_2 Atlas_35: -8718302880813576883
+      Ape_Alley_font_2 Atlas_36: 568958122585277612
+      Ape_Alley_font_2 Atlas_37: -7349845957509986821
+      Ape_Alley_font_2 Atlas_38: -6969894940784432428
+      Ape_Alley_font_2 Atlas_39: -637590903884939802
+      Ape_Alley_font_2 Atlas_4: 7051438882674100782
+      Ape_Alley_font_2 Atlas_40: 6849368510229852683
+      Ape_Alley_font_2 Atlas_41: 7965949866412031706
+      Ape_Alley_font_2 Atlas_42: 3956402007194633317
+      Ape_Alley_font_2 Atlas_43: -6447495793568770577
+      Ape_Alley_font_2 Atlas_44: -8762048965570155111
+      Ape_Alley_font_2 Atlas_45: 4685663501306288353
+      Ape_Alley_font_2 Atlas_46: -6575447647831469402
+      Ape_Alley_font_2 Atlas_47: -6624341533370552935
+      Ape_Alley_font_2 Atlas_48: -1249730729013346551
+      Ape_Alley_font_2 Atlas_49: -3003834253560772051
+      Ape_Alley_font_2 Atlas_5: -8207029588441845727
+      Ape_Alley_font_2 Atlas_50: -7542891212480297891
+      Ape_Alley_font_2 Atlas_51: 9184065053277292711
+      Ape_Alley_font_2 Atlas_52: 4101776657125367291
+      Ape_Alley_font_2 Atlas_53: 7991969799381928824
+      Ape_Alley_font_2 Atlas_54: -3305168851026203678
+      Ape_Alley_font_2 Atlas_55: -1579286130517427326
+      Ape_Alley_font_2 Atlas_56: 7761395123106809948
+      Ape_Alley_font_2 Atlas_57: 6085522433346262348
+      Ape_Alley_font_2 Atlas_58: -2075401682963440839
+      Ape_Alley_font_2 Atlas_59: 5396466889433571341
+      Ape_Alley_font_2 Atlas_6: -3043011779982574616
+      Ape_Alley_font_2 Atlas_60: 3963899840674173784
+      Ape_Alley_font_2 Atlas_61: 7841204219455952032
+      Ape_Alley_font_2 Atlas_62: -5922696049468712778
+      Ape_Alley_font_2 Atlas_63: -9117394523925689991
+      Ape_Alley_font_2 Atlas_64: 1585871596702444106
+      Ape_Alley_font_2 Atlas_65: -3821958088031314392
+      Ape_Alley_font_2 Atlas_66: -1093269519856610879
+      Ape_Alley_font_2 Atlas_67: -7253900661202029547
+      Ape_Alley_font_2 Atlas_68: 4865806816301677180
+      Ape_Alley_font_2 Atlas_69: -8636995146536014436
+      Ape_Alley_font_2 Atlas_7: -7319284655871351063
+      Ape_Alley_font_2 Atlas_70: -1250958725514250269
+      Ape_Alley_font_2 Atlas_71: -3046992416345318970
+      Ape_Alley_font_2 Atlas_72: 6572691919262383943
+      Ape_Alley_font_2 Atlas_73: 8554610490367475799
+      Ape_Alley_font_2 Atlas_74: -441601480795403712
+      Ape_Alley_font_2 Atlas_75: -8043364898450513202
+      Ape_Alley_font_2 Atlas_76: -8309376268689177402
+      Ape_Alley_font_2 Atlas_77: 8591785183469785121
+      Ape_Alley_font_2 Atlas_78: 5875397162771397978
+      Ape_Alley_font_2 Atlas_79: 1305201347688814000
+      Ape_Alley_font_2 Atlas_8: -7716590125002266793
+      Ape_Alley_font_2 Atlas_80: -6694277181931245720
+      Ape_Alley_font_2 Atlas_81: 1402974430707741668
+      Ape_Alley_font_2 Atlas_82: 1535916463349105637
+      Ape_Alley_font_2 Atlas_83: 3499852627991367647
+      Ape_Alley_font_2 Atlas_84: 885017331159415748
+      Ape_Alley_font_2 Atlas_85: -4240097369210521809
+      Ape_Alley_font_2 Atlas_9: 5787636363222016446
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
