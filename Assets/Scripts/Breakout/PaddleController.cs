@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class PaddleController : MonoBehaviour {
-    public float speed = 10f;
+    public float speed = 0.001f;
     private Rigidbody2D rb;
     public float leftBoundary = -8.85f;
     public float rightBoundary = 8.85f;
@@ -13,17 +13,19 @@ public class PaddleController : MonoBehaviour {
         paddleHalfWidth = GetComponent<BoxCollider2D>().bounds.size.x / 2;
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        float moveInput = Input.GetAxis("Horizontal");
-        rb.linearVelocity = new Vector2(moveInput * speed, 0);
-        
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        Vector2 movement = new Vector2(moveInput * speed * 0.6f, 0);
+
         // position of boundaries
         float clampedX = Mathf.Clamp(
-            transform.position.x,
+            rb.position.x + movement.x * Time.fixedDeltaTime,
             leftBoundary + paddleHalfWidth,
             rightBoundary - paddleHalfWidth
         );
-        transform.position = new Vector2(clampedX, transform.position.y);
+
+        Vector2 targetPos = new Vector2(clampedX, rb.position.y);
+        rb.MovePosition(targetPos);
     }
 }

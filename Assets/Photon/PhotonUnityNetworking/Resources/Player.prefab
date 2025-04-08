@@ -3802,6 +3802,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MessageBubbleCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 231910612334105126, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3069688416253288747, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -3884,6 +3888,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6632595932557684116, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
       propertyPath: m_SortingLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7851627822808625059, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f0518e96911fd3c45bc5f88e3de3bbab, type: 2}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6055246153671859089, guid: f0518e96911fd3c45bc5f88e3de3bbab, type: 2}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7886722807918918108, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

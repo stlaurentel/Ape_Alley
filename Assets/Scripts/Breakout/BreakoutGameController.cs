@@ -12,6 +12,6 @@ public class BreakoutGameManager : MonoBehaviour {
 
     public void AddScore(int points) {
         score += points;
-        scoreText.text = $"Score: {score}";
+        scoreText.text = $"Score:    {score}";
     }
 }
