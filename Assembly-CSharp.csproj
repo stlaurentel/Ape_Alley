@@ -68,6 +68,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\FriendItem.cs" />
     <Compile Include="Assets\Scripts\DinosaurMinigame\CactusMovement.cs" />
     <Compile Include="Assets\Scripts\ChatManager.cs" />
+    <Compile Include="Assets\Scripts\SplashButton.cs" />
     <Compile Include="Assets\Scripts\Breakout\BreakoutUI.cs" />
     <Compile Include="Assets\Photon\PhotonRealtime\Demos\DemoLoadBalancing\ConnectAndJoinRandomLb.cs" />
     <Compile Include="Assets\Scripts\DinosaurMinigame\DinoGameManager.cs" />
@@ -87,6 +88,7 @@
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\NamePickGui.cs" />
     <Compile Include="Assets\Scripts\Breakout\PaddleController.cs" />
     <Compile Include="Assets\Scripts\Breakout\BrickController.cs" />
+    <Compile Include="Assets\Unity.VisualScripting.Generated\VisualScripting.Core\AotStubs.cs" />
     <Compile Include="Assets\Scripts\PlayerInventory.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\Common\TextToggleIsOnTransition.cs" />
     <Compile Include="Assets\Photon\PhotonChat\Demos\DemoChat\IgnoreUiRaycastWhenInactive.cs" />

@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BreakoutMinigame.unity
     guid: 205cd9feda04b32489eb8eefdc0aaa8b
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: b04ba52f65710274ba5a09b68c3c9048
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
