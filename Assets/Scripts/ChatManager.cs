@@ -7,59 +7,88 @@ using System.Collections;
 
 public class ChatManager : MonoBehaviourPunCallbacks
 {
+    [Header("Prefab References")]
     public GameObject chatCanvasPrefab;
-    public GameObject messageBubblePrefab; 
+    public GameObject messageBubblePrefab;
     
+    [Header("UI Settings")]
+    public float messageBubbleDuration = 3f;
+    
+    // UI References
     private TMP_InputField chatInput;
     private TMP_Text chatLogText;
     private GameObject chatPrompt;
     private GameObject chatLogPanel;
     
+    // Runtime variables
     private GameObject chatInstance;
-    private PhotonView photonView;
     private bool isChatOpen = false;
 
     private void Awake() 
     {
-        photonView = GetComponent<PhotonView>();
+        // Verify we have a PhotonView
+        if (photonView == null)
+        {
+            Debug.LogError("ChatManager requires a PhotonView on the same GameObject!", this);
+            return;
+        }
+
+        // Instantiate the chat UI
         chatInstance = Instantiate(chatCanvasPrefab, transform);
         InitializeChatReferences();
 
-        if (!photonView.IsMine) {
-            chatInput.interactable = false;
-            chatPrompt.SetActive(false);
+        Debug.Log($"Chat canvas created for {(photonView.IsMine ? "LOCAL" : "REMOTE")} player");
+
+        // Only enable interaction for local player
+        if (!photonView.IsMine) 
+        {
+            if (chatInput != null) chatInput.interactable = false;
+            if (chatPrompt != null) chatPrompt.SetActive(false);
         }
     }
-    
-    
 
     private void InitializeChatReferences()
     {
-        // Get references from the instantiated canvas
-        chatInput = chatInstance.transform.Find("InputPromptPanel/ChatInput").GetComponent<TMP_InputField>();
-        chatLogPanel = chatInstance.transform.Find("ChatLogPanel").gameObject;
-        chatLogText = chatLogPanel.transform.Find("ChatLogText").GetComponent<TMP_Text>();
-        chatPrompt = chatInstance.transform.Find("InputPromptPanel/ChatPrompt").gameObject;
-        
-        chatInput.gameObject.SetActive(false);
-        chatPrompt.SetActive(photonView.IsMine);
-        //chatLogPanel.SetActive(true);
-    }
+        // Ensure this runs for ALL players
+        chatInput = chatInstance.transform.Find("InputPromptPanel/ChatInput")?.GetComponent<TMP_InputField>();
+        chatLogPanel = chatInstance.transform.Find("ChatLogPanel")?.gameObject;
+        chatLogText = chatLogPanel?.transform.Find("ChatLogText")?.GetComponent<TMP_Text>();
+        chatPrompt = chatInstance.transform.Find("InputPromptPanel/ChatPrompt")?.gameObject;
 
+        if (chatLogText != null) {
+            chatLogText.text += "\n";
+        }
+        // Initialize UI state
+        if (chatInput != null) 
+            chatInput.gameObject.SetActive(false);
+    
+        if (chatPrompt != null)
+            chatPrompt.SetActive(photonView.IsMine); // Only show prompt for local player
+    
+        // ACTIVATE CHAT LOG FOR EVERYONE
+        if (chatLogPanel != null)
+            chatLogPanel.SetActive(true);
+            
+    }
 
     private void Update()
     {
         if (!photonView.IsMine) return;
-        if ((Input.GetKeyDown(KeyCode.Slash) || Input.GetKeyDown(KeyCode.Backslash) || Input.GetKeyDown(KeyCode.Question)) && !isChatOpen)
+
+        // Open chat with / key
+        if ((Input.GetKeyDown(KeyCode.Slash) || 
+             Input.GetKeyDown(KeyCode.Backslash)) && !isChatOpen)
         {
             OpenChat();
         }
         
-        if (isChatOpen && Input.GetKeyDown(KeyCode.Return) && !string.IsNullOrEmpty(chatInput.text))
+        // Send message on Enter
+        if (isChatOpen && Input.GetKeyDown(KeyCode.Return) && !string.IsNullOrEmpty(chatInput?.text))
         {
             SendChatMessage();
         }
         
+        // Close chat on Escape
         if (isChatOpen && Input.GetKeyDown(KeyCode.Escape))
         {
             CloseChat();
@@ -68,6 +97,8 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
     private void OpenChat()
     {
+        if (chatInput == null || chatPrompt == null) return;
+        
         isChatOpen = true;
         chatInput.gameObject.SetActive(true);
         chatPrompt.SetActive(false);
@@ -77,12 +108,14 @@ public class ChatManager : MonoBehaviourPunCallbacks
     private IEnumerator ForceInputFieldFocus()
     {
         yield return null; // Wait one frame
-        chatInput.Select();
-        chatInput.ActivateInputField();
+        chatInput?.Select();
+        chatInput?.ActivateInputField();
     }
 
     private void CloseChat()
     {
+        if (chatInput == null || chatPrompt == null) return;
+        
         isChatOpen = false;
         chatInput.gameObject.SetActive(false);
         chatPrompt.SetActive(true);
@@ -91,14 +124,14 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
     private void SendChatMessage()
     {
+        if (chatInput == null || string.IsNullOrEmpty(chatInput.text)) return;
+
         string message = chatInput.text;
         string sender = PhotonNetwork.LocalPlayer.NickName;
         
-        if (photonView != null)
-        {
-            photonView.RPC("ReceiveMessage", RpcTarget.All, sender, message);
-            AddMessageToLog(sender, message); // Show locally immediately
-        }
+        // Send to all players
+        photonView.RPC(nameof(ReceiveMessage), RpcTarget.All, sender, message);
+        AddMessageToLog(sender, message); // Show locally immediately
         
         CloseChat();
     }
@@ -106,57 +139,98 @@ public class ChatManager : MonoBehaviourPunCallbacks
     [PunRPC]
     public void ReceiveMessage(string sender, string message)
     {
-        // Only update UI for local player
-        AddMessageToLog(sender, message);
-        
-        if (sender == PhotonNetwork.LocalPlayer.NickName) {
+        // Debug log to verify reception
+        Debug.Log($"Received message from {sender}: {message}");
+
+        // Add if message is not our own duplicate
+        if (!(sender == PhotonNetwork.LocalPlayer.NickName)) AddMessageToLog(sender, message);
+    
+        // Show bubble only for sender's local view
+        if (sender == PhotonNetwork.LocalPlayer.NickName)
+        {
             ShowMessageBubble(sender, message);
         }
     }
 
+
     private void AddMessageToLog(string sender, string message)
     {
         string formattedMessage = $"{sender}: {message}\n";
-        chatLogText.text += formattedMessage;
-        
-        Canvas.ForceUpdateCanvases();
-        var scrollRect = chatLogPanel.GetComponentInParent<ScrollRect>();
-        if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0f;
+    
+        // Updated to use non-deprecated FindObjectsByType
+        ChatManager[] allChatManagers = FindObjectsByType<ChatManager>(FindObjectsSortMode.None);
+    
+        foreach (ChatManager chatManager in allChatManagers)
+        {
+            if (chatManager.chatLogText != null)
+            {
+                // Use StartCoroutine directly since Photon RPCs are already on main thread
+                chatManager.StartCoroutine(chatManager.UpdateChatLog(formattedMessage));
+            }
+        }
     }
 
-    [PunRPC]
-    private void SyncChatLog(string sender, string message)
+    private IEnumerator UpdateChatLog(string formattedMessage)
     {
-        string formattedMessage = $"{sender}: {message}\n";
-        chatLogText.text += formattedMessage;
-        
-        Canvas.ForceUpdateCanvases();
-        var scrollRect = chatLogPanel.GetComponentInParent<ScrollRect>();
-        if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0f;
+        // Handle text overflow
+        if (chatLogText.text.Length > 1000)
+        {
+            chatLogText.text = chatLogText.text.Substring(500) + formattedMessage;
+        }
+        else
+        {
+            chatLogText.text += formattedMessage;
+        }
+    
+        Debug.Log($"Message added to {photonView.Owner?.NickName}'s chat");
+    
+        // Scroll to bottom
+        yield return new WaitForEndOfFrame();
+        if (chatLogPanel != null)
+        {
+            var scrollRect = chatLogPanel.GetComponentInParent<ScrollRect>();
+            if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0;
+        }
     }
 
-
+    // Modified to work without instance references
+    private IEnumerator ScrollToBottom()
+    {
+        yield return new WaitForEndOfFrame();
+        if (this.chatLogPanel != null)
+        {
+            var scrollRect = this.chatLogPanel.GetComponentInParent<ScrollRect>();
+            if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0;
+        }
+    }
 
     private void ShowMessageBubble(string sender, string message)
     {
-        // Find the player who sent this message
-        GameObject targetPlayer = FindPlayerByName(sender);
-        if (targetPlayer == null || messageBubblePrefab == null) return;
+        if (messageBubblePrefab == null) return;
 
-        // Create or find existing bubble
-        Transform bubble = targetPlayer.transform.Find("MessageBubble");
-        if (bubble == null)
+        GameObject targetPlayer = FindPlayerByName(sender);
+        if (targetPlayer == null) return;
+
+        // Find existing bubble
+        Transform bubbleTransform = targetPlayer.transform.Find("MessageBubble(Clone)");
+        GameObject bubble;
+    
+        if (bubbleTransform != null)
         {
-            bubble = Instantiate(messageBubblePrefab, targetPlayer.transform).transform;
-            bubble.name = "MessageBubble";
+            bubble = bubbleTransform.gameObject;
         }
-        
+        else
+        {
+            bubble = Instantiate(messageBubblePrefab, targetPlayer.transform);
+            bubble.name = "MessageBubble(Clone)";
+        }
+    
         // Set message text
         TMP_Text bubbleText = bubble.GetComponentInChildren<TMP_Text>();
         if (bubbleText != null) bubbleText.text = message;
-        
-        bubble.gameObject.SetActive(true);
-        StartCoroutine(HideBubbleAfterDelay(bubble.gameObject, 3f));
+    
+        bubble.SetActive(true);
+        StartCoroutine(HideBubbleAfterDelay(bubble, messageBubbleDuration));
     }
 
     private IEnumerator HideBubbleAfterDelay(GameObject bubble, float delay)
@@ -169,12 +243,9 @@ public class ChatManager : MonoBehaviourPunCallbacks
     {
         foreach (var player in PhotonNetwork.PlayerList)
         {
-            if (player.NickName == name)
+            if (player.NickName == name && player.TagObject is GameObject playerObj)
             {
-                if (player.TagObject is GameObject playerObj)
-                {
-                    return playerObj;
-                }
+                return playerObj;
             }
         }
         return null;

@@ -445,7 +445,7 @@ GameObject:
   - component: {fileID: 1918842553876594746}
   - component: {fileID: -8881730691639425385}
   - component: {fileID: -2683128218602973129}
-  - component: {fileID: 15982048615625122}
+  - component: {fileID: 8563676476493124925}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -772,7 +772,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: {fileID: 0}
---- !u!114 &15982048615625122
+--- !u!114 &8563676476493124925
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -786,6 +786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatCanvasPrefab: {fileID: 1570893667838764170, guid: 746c17d68c8f0f846adb2119345780a1, type: 3}
   messageBubblePrefab: {fileID: 231910612334105126, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
+  messageBubbleDuration: 3
 --- !u!1 &2520485150452903109
 GameObject:
   m_ObjectHideFlags: 0
