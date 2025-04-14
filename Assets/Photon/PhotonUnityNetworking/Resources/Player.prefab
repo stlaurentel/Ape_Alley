@@ -633,6 +633,7 @@ MonoBehaviour:
   tilemap: {fileID: 0}
   oob: {fileID: 0}
   canMove: 1
+  playerTyping: 0
   popupBubble: {fileID: 5879394461876022734, guid: 4bcc1bfd43f2ea24989d0a3caff44579, type: 3}
   EyewearSlot: {fileID: 3796288517035335692}
   inventoryCanvas: {fileID: 8970429879323090259}

@@ -434,7 +434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1657887556222743342, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.3
+      value: 1.72
       objectReference: {fileID: 0}
     - target: {fileID: 1657887556222743342, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
       propertyPath: m_LocalScale.y
@@ -496,6 +496,22 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2749508370633431252, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481409170451915091, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009327021880357639, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4009327021880357639, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3289650
+      objectReference: {fileID: 0}
     - target: {fileID: 4994508638306642056, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
       propertyPath: m_Name
       value: ChatInput
@@ -505,8 +521,44 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_CaretWidth
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
       propertyPath: m_Interactable
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_SelectionColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_Colors.m_PressedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999948120524558822, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_Colors.m_HighlightedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995091539786329226, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_fontColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8995091539786329226, guid: 4fee63f6c26482e4ba0d2f14b33a88b8, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 3289650
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

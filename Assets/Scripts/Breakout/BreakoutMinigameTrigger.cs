@@ -69,7 +69,7 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
         canLoadScene = true;
     }
 
-     private GameObject GetLocalPlayer()
+    private GameObject GetLocalPlayer()
     {
         // More reliable way to find local player in Photon
         PhotonView[] photonViews = FindObjectsByType<PhotonView>(FindObjectsSortMode.None);

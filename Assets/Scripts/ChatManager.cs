@@ -4,6 +4,8 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using System.Collections;
+using System; 
+using System.Collections.Generic;
 
 public class ChatManager : MonoBehaviourPunCallbacks
 {
@@ -55,6 +57,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
         chatLogText = chatLogPanel?.transform.Find("ChatLogText")?.GetComponent<TMP_Text>();
         chatPrompt = chatInstance.transform.Find("InputPromptPanel/ChatPrompt")?.gameObject;
 
+        if (photonView.IsMine) {
         if (chatLogText != null) {
             chatLogText.text += "\n";
         }
@@ -68,7 +71,33 @@ public class ChatManager : MonoBehaviourPunCallbacks
         // ACTIVATE CHAT LOG FOR EVERYONE
         if (chatLogPanel != null)
             chatLogPanel.SetActive(true);
+
+        if (photonView.IsMine && chatInput != null)
+        {
+            chatInput.onValueChanged.AddListener(UpdateTypingPrompt);
+        }
+        }
+        else {
+            if (chatInstance != null) {
+                chatInstance.SetActive(false);
+            }
+        }
             
+    }
+
+    private void UpdateTypingPrompt(string currentText)
+    {
+        if (!isChatOpen || chatPrompt == null) return;
+        TMP_Text promptText = chatPrompt.GetComponent<TMP_Text>();
+    
+        if (currentText.StartsWith("/"))
+        {
+            promptText.text = currentText.Substring(1); // Show text after slash
+        }
+        else
+        {
+            promptText.text = currentText; // Show full text if no slash
+        }
     }
 
     private void Update()
@@ -101,8 +130,16 @@ public class ChatManager : MonoBehaviourPunCallbacks
         
         isChatOpen = true;
         chatInput.gameObject.SetActive(true);
-        chatPrompt.SetActive(false);
+        chatPrompt.SetActive(true);
         StartCoroutine(ForceInputFieldFocus());
+        TMP_Text promptText = chatPrompt.GetComponent<TMP_Text>();
+        promptText.text = "";
+        GameObject player = GetLocalPlayer();
+        if (player != null) {
+            player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<PlayerMovement>().playerTyping = true;
+            player.GetComponent<PhotonView>().RPC("SetTypingState", RpcTarget.Others, true);
+        }
     }
     
     private IEnumerator ForceInputFieldFocus()
@@ -119,7 +156,30 @@ public class ChatManager : MonoBehaviourPunCallbacks
         isChatOpen = false;
         chatInput.gameObject.SetActive(false);
         chatPrompt.SetActive(true);
+        TMP_Text promptText = chatPrompt.GetComponent<TMP_Text>();
+        promptText.text = "Press / to chat...";
         chatInput.text = "";
+        GameObject player = GetLocalPlayer();
+        if (player != null) {
+            player.GetComponent<PlayerMovement>().enabled = true;
+            player.GetComponent<PlayerMovement>().playerTyping = false;
+            player.GetComponent<PhotonView>().RPC("SetTypingState", RpcTarget.Others, false);
+        }
+    }
+
+    private GameObject GetLocalPlayer()
+    {
+        // More reliable way to find local player in Photon
+        PhotonView[] photonViews = FindObjectsByType<PhotonView>(FindObjectsSortMode.None);
+        foreach (PhotonView view in photonViews)
+        {
+            if (view.IsMine && view.CompareTag("Player"))
+            {
+                return view.gameObject;
+            }
+        }
+        Debug.LogWarning("Local player not found");
+        return null;
     }
 
     private void SendChatMessage()
@@ -171,27 +231,35 @@ public class ChatManager : MonoBehaviourPunCallbacks
     }
 
     private IEnumerator UpdateChatLog(string formattedMessage)
+{
+    // Split the existing text into lines
+    string[] lines = chatLogText.text.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+    
+    // Keep max 14 lines (excluding empty lines)
+    const int maxLines = 14;
+    if (lines.Length >= maxLines)
     {
-        // Handle text overflow
-        if (chatLogText.text.Length > 1000)
-        {
-            chatLogText.text = chatLogText.text.Substring(500) + formattedMessage;
-        }
-        else
-        {
-            chatLogText.text += formattedMessage;
-        }
-    
-        Debug.Log($"Message added to {photonView.Owner?.NickName}'s chat");
-    
-        // Scroll to bottom
-        yield return new WaitForEndOfFrame();
-        if (chatLogPanel != null)
-        {
-            var scrollRect = chatLogPanel.GetComponentInParent<ScrollRect>();
-            if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0;
-        }
+        // Remove the oldest line (index 0) while preserving the empty line if it exists
+        List<string> lineList = new List<string>(lines);
+        lineList.RemoveAt(1);
+        chatLogText.text = string.Join("\n", lineList) + "\n" + formattedMessage;
     }
+    else
+    {
+        // Just append normally if under limit
+        chatLogText.text += formattedMessage;
+    }
+    
+    Debug.Log($"Message added to {photonView.Owner?.NickName}'s chat (Lines: {lines.Length})");
+    
+    // Scroll to bottom
+    yield return new WaitForEndOfFrame();
+    if (chatLogPanel != null)
+    {
+        var scrollRect = chatLogPanel.GetComponentInParent<ScrollRect>();
+        if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0;
+    }
+}
 
     // Modified to work without instance references
     private IEnumerator ScrollToBottom()

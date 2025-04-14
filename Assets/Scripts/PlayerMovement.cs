@@ -3,7 +3,7 @@ using Photon.Pun;
 using UnityEngine.Tilemaps;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviourPun
+public class PlayerMovement : MonoBehaviourPunCallbacks
 {
     public float moveSpeed = 5f;
     private Rigidbody2D rb;
@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviourPun
     public Tilemap oob;
 
     public bool canMove = true;
+    public bool playerTyping = false;
 
     private CustomizePlayer customization;
     private PlayerInventory inventory;
@@ -60,6 +61,12 @@ public class PlayerMovement : MonoBehaviourPun
 
     }
 
+    [PunRPC]
+    public void SetTypingState(bool isTyping) {
+        enabled = !isTyping;
+        playerTyping = isTyping;
+    }
+
     void Update()
     {
         var ePress = Input.GetKeyDown(KeyCode.E);
@@ -71,7 +78,7 @@ public class PlayerMovement : MonoBehaviourPun
             customization.ToggleEyepatch();
         }
 
-        if (ePress)
+        if (ePress && !(playerTyping))
         {
             inventoryCanvas.SetActive(!inventoryCanvas.activeInHierarchy);
 
