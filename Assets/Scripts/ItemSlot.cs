@@ -1,32 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
-public class ItemSlot : MonoBehaviour
+
+public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
-    public string name;
-    public Sprite sprite;
+    public string itemName;
+    //public Sprite sprite;
     public bool isFull = false;
 
-    private SpriteRenderer itemSpriteRenderer;
+    public Image image;
+
+    public GameObject selectedShader;
+    public bool selected = false;
+
+    public CustomizePlayer customizePlayer;
 
     void Start()
     {
-        Transform child = transform.Find("ItemSprite");
-        if (child != null)
-        {
-            itemSpriteRenderer = child.GetComponent<SpriteRenderer>();
-        }
-        else
-        {
-            Debug.LogError("ItemSprite child not found on " + gameObject.name);
-        }
+        
     }
 
     public void AddItem(string name, Sprite sprite)
     {
-        this.name = name;
-        this.sprite = sprite;
-        itemSpriteRenderer.sprite = sprite;
+        //this.name = name;
+        itemName = name;
+        //this.sprite = sprite;
+        image.sprite = sprite;
         isFull = true;
     }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        Debug.Log("click");
+        if (eventData.button == PointerEventData.InputButton.Left && isFull)
+        {
+            Debug.Log("Selecting");
+            if (!selected)
+            {
+                customizePlayer.inventory.DeselectAll();
+                selectedShader.SetActive(true);
+                selected = true;
+                EquipItem();
+            }
+            else
+            {
+                customizePlayer.inventory.DeselectAll();
+                EquipItem();
+            }
+
+        }
+    }
+
+    private void EquipItem()
+    {
+        if (this.itemName == "clownHat")
+        {
+            Debug.Log("toggle clownHat");
+            customizePlayer.ToggleClownHat();
+        }
+        else if (this.itemName == "eyepatch")
+        {
+            customizePlayer.ToggleEyepatch();
+        }
+    }
+
 }

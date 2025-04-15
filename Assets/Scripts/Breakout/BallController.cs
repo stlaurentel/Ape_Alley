@@ -27,26 +27,32 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Maintain constant speed while bouncing
-        float currentSpeed = lastVelocity.magnitude;
-        Vector2 direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
-        rb.linearVelocity = direction * Mathf.Max(currentSpeed, speed);
-
-        // Special paddle handling
-        if (collision.gameObject.CompareTag("Paddle"))
+        if (collision.gameObject.CompareTag("Wall") || 
+            collision.gameObject.CompareTag("Paddle") || 
+            collision.gameObject.CompareTag("Brick"))
         {
-            // Add directional influence based on hit position
-            float hitPosition = (transform.position.x - collision.transform.position.x) / 
-                               collision.collider.bounds.size.x;
-            direction = new Vector2(hitPosition, 1).normalized;
-            rb.linearVelocity = direction * speed;
-        }
+            // Maintain constant speed while bouncing
+            float currentSpeed = lastVelocity.magnitude;
+            Vector2 direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+            rb.linearVelocity = direction * Mathf.Max(currentSpeed, speed);
 
-        // Brick destruction
-        if (collision.gameObject.CompareTag("Brick"))
-        {
-            Destroy(collision.gameObject);
-            BreakoutGameManager.Instance.AddScore(10);
+            // Special paddle handling
+            if (collision.gameObject.CompareTag("Paddle"))
+            {
+                // Add directional influence based on hit position
+                float hitPosition = (transform.position.x - collision.transform.position.x) /
+                                   collision.collider.bounds.size.x;
+                direction = new Vector2(hitPosition, 1).normalized;
+                rb.linearVelocity = direction * speed;
+            }
+
+            // Brick destruction
+            if (collision.gameObject.CompareTag("Brick"))
+            {
+                Destroy(collision.gameObject);
+                BreakoutGameManager.Instance.AddScore(10);
+            }
         }
+        
     }
 }

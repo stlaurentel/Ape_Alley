@@ -163,7 +163,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &832371731024685233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 793172594, guid: a03c2610221b14940b818fb271b448fa, type: 3}
+  m_Sprite: {fileID: -9182177788924653191, guid: 18782c79aab81eb47a8f99596d1b5e92, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -282,6 +282,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 488356872949548468}
     m_Modifications:
+    - target: {fileID: 7038572142135960368, guid: 1f1c806af4ef7dc409f0e985ffd82509, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038572142135960368, guid: 1f1c806af4ef7dc409f0e985ffd82509, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f0518e96911fd3c45bc5f88e3de3bbab, type: 2}
+    - target: {fileID: 7038572142135960368, guid: 1f1c806af4ef7dc409f0e985ffd82509, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7038572142135960368, guid: 1f1c806af4ef7dc409f0e985ffd82509, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6055246153671859089, guid: f0518e96911fd3c45bc5f88e3de3bbab, type: 2}
+    - target: {fileID: 7038572142135960368, guid: 1f1c806af4ef7dc409f0e985ffd82509, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8722246323931165753, guid: 1f1c806af4ef7dc409f0e985ffd82509, type: 3}
       propertyPath: m_Name
       value: BananaText
@@ -395,6 +415,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2610213745206711287}
     m_Modifications:
+    - target: {fileID: 218777059965859556, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
+      propertyPath: m_fontSize
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 218777059965859556, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: f0518e96911fd3c45bc5f88e3de3bbab, type: 2}
+    - target: {fileID: 218777059965859556, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
+      propertyPath: m_wordSpacing
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 218777059965859556, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 218777059965859556, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6055246153671859089, guid: f0518e96911fd3c45bc5f88e3de3bbab, type: 2}
+    - target: {fileID: 218777059965859556, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6353156451317680947, guid: b646330c425b5434fad442d9f27e4a8b, type: 3}
       propertyPath: m_Name
       value: MessagePanel

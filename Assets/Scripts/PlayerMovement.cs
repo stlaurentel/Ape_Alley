@@ -10,8 +10,8 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     private Vector2 moveInput;
 
     private Animator playerAnimator;
-    private Animator eyePatchAnimator;
-    private Animator clownHatAnimator;
+    public Animator eyePatchAnimator;
+    public Animator clownHatAnimator;
 
     public Tilemap tilemap;
     public Tilemap oob;
@@ -34,8 +34,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         rb = GetComponent<Rigidbody2D>();
 
         playerAnimator = GetComponent<Animator>();
-        eyePatchAnimator = transform.Find("EyewearSlot").GetComponent<Animator>();
-        clownHatAnimator = transform.Find("ClownHatSlot").GetComponent<Animator>();
+
         print(eyePatchAnimator);
         if (eyePatchAnimator != null)
         {
@@ -176,10 +175,10 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         {
             Debug.Log("Player is touching an obtainable item.");
             Item item = other.GetComponent<Item>();
-            if (!inventory.HasItem(item.name))
+            if (!inventory.HasItem(item.itemName))
             {
-                inventory.AddItem(item.name, item.sprite);
-                CreateBubblePopup("Collected " + item.name + "!", rb.position);
+                inventory.AddItem(item.itemName, item.sprite);
+                CreateBubblePopup("Collected " + item.itemName + "!", rb.position);
             }
         }
         

@@ -9,11 +9,7 @@ public class PlayerInventory : MonoBehaviour
     public bool hasEyepatch = true;
     public bool hasClownHat = false;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void AddItem(string name, Sprite sprite)
     {
@@ -31,14 +27,23 @@ public class PlayerInventory : MonoBehaviour
 
     public bool HasItem(string otherName)
     {
-        for (int i = 0; i < itemSlot.Length; i++)
+        foreach (ItemSlot slot in itemSlot)
         {
-            if (itemSlot[i].name == otherName)
+            if (slot != null && slot.itemName == otherName)
             {
                 Debug.Log("Player already has item " + otherName);
                 return true;
             }
         }
         return false;
+    }
+
+    public void DeselectAll()
+    {
+        for (int i = 0; i < itemSlot.Length; i++)
+        {
+            itemSlot[i].selectedShader.SetActive(false);
+            itemSlot[i].selected = false;
+        }
     }
 }

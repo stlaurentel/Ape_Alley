@@ -3,7 +3,7 @@ using UnityEngine;
 public class Item : MonoBehaviour
 {
     [SerializeField]
-    public string name;
+    public string itemName;
 
     [SerializeField]
     public Sprite sprite;
