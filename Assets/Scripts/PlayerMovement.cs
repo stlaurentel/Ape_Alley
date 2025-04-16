@@ -62,6 +62,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     [PunRPC]
     public void SetTypingState(bool isTyping) {
+        if (!photonView.IsMine) return;
         enabled = !isTyping;
         playerTyping = isTyping;
     }

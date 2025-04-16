@@ -126,19 +126,29 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
     private void OpenChat()
     {
-        if (chatInput == null || chatPrompt == null) return;
-        
+        if (!photonView.IsMine || chatInput == null || chatPrompt == null) return;
+    
         isChatOpen = true;
         chatInput.gameObject.SetActive(true);
         chatPrompt.SetActive(true);
         StartCoroutine(ForceInputFieldFocus());
         TMP_Text promptText = chatPrompt.GetComponent<TMP_Text>();
         promptText.text = "";
+    
         GameObject player = GetLocalPlayer();
-        if (player != null) {
-            player.GetComponent<PlayerMovement>().enabled = false;
-            player.GetComponent<PlayerMovement>().playerTyping = true;
-            player.GetComponent<PhotonView>().RPC("SetTypingState", RpcTarget.Others, true);
+        if (player != null) 
+        {
+            // Only disable movement on the local player
+            PlayerMovement movement = player.GetComponent<PlayerMovement>();
+            if (movement != null)
+            {
+                movement.enabled = false;
+                movement.playerTyping = true;
+                player.GetComponent<PhotonView>().RPC("SetTypingState", RpcTarget.Others, true);
+            }
+            else {
+                Debug.LogError("PlayerMovement component not found on player!");
+            }
         }
     }
     
@@ -151,33 +161,50 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
     private void CloseChat()
     {
-        if (chatInput == null || chatPrompt == null) return;
-        
+        if (!photonView.IsMine || chatInput == null || chatPrompt == null) return;
+    
         isChatOpen = false;
         chatInput.gameObject.SetActive(false);
         chatPrompt.SetActive(true);
         TMP_Text promptText = chatPrompt.GetComponent<TMP_Text>();
         promptText.text = "Press / to chat...";
         chatInput.text = "";
+    
         GameObject player = GetLocalPlayer();
-        if (player != null) {
-            player.GetComponent<PlayerMovement>().enabled = true;
-            player.GetComponent<PlayerMovement>().playerTyping = false;
-            player.GetComponent<PhotonView>().RPC("SetTypingState", RpcTarget.Others, false);
+        if (player != null) 
+        {
+            // Only enable movement on the local player
+            PlayerMovement movement = player.GetComponent<PlayerMovement>();
+            if (movement != null)
+            {
+                movement.enabled = true;
+                movement.playerTyping = false;
+                player.GetComponent<PhotonView>().RPC("SetTypingState", RpcTarget.Others, false);
+            }
         }
     }
 
     private GameObject GetLocalPlayer()
-    {
-        // More reliable way to find local player in Photon
+    {   
+        Debug.Log($"Searching for local player: {PhotonNetwork.LocalPlayer.NickName}");
+        if (photonView != null && photonView.gameObject.CompareTag("Player") && photonView.IsMine)
+        {
+            return photonView.gameObject;
+        } 
+    
         PhotonView[] photonViews = FindObjectsByType<PhotonView>(FindObjectsSortMode.None);
         foreach (PhotonView view in photonViews)
         {
-            if (view.IsMine && view.CompareTag("Player"))
+            Debug.Log($"Checking view: Owner={view.Owner?.NickName}, IsMine={view.IsMine}, Tag={view.tag}");
+            if (view.IsMine && view.CompareTag("Player") && 
+            view.Owner != null && 
+            view.Owner.NickName == PhotonNetwork.LocalPlayer.NickName &&
+            view.GetComponent<PlayerMovement>() != null)
             {
                 return view.gameObject;
             }
         }
+        
         Debug.LogWarning("Local player not found");
         return null;
     }
