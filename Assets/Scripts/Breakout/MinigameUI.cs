@@ -14,17 +14,11 @@ public class BreakoutUI : MonoBehaviour
     private bool gameWin = false;
 
     public void QuitMinigame() {
-        ResumePlayerMovement();
         SceneManager.UnloadSceneAsync(minigameSceneName);
-    
-        // Notify trigger that minigame unloaded
-        if (BreakoutMinigameTrigger.Instance != null)
-        {
-            BreakoutMinigameTrigger.Instance.OnMinigameUnloaded();
-            BreakoutMinigameTrigger.Instance.canClickSpace = true;
-        }
+        ResumePlayerMovement();
+        BreakoutMinigameTrigger.Instance.canClickSpace = true;
+        Debug.Log("canClickSpace = true");
     }
-
 
     private void ResumePlayerMovement() {
         GameObject localPlayer = GameObject.FindGameObjectWithTag("Player");

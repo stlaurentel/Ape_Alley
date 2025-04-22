@@ -103,11 +103,6 @@ public class ChatManager : MonoBehaviourPunCallbacks
     private void Update()
     {
         if (!photonView.IsMine) return;
-        if (BreakoutMinigameTrigger.Instance != null && 
-        BreakoutMinigameTrigger.Instance.minigameLoaded)
-        {
-        return; // Don't allow chat during minigame
-        }
 
         // Open chat with / key
         if ((Input.GetKeyDown(KeyCode.Slash) || 

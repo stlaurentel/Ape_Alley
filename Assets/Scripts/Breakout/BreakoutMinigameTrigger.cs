@@ -13,7 +13,6 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     private bool canLoadScene = true;
     public bool canClickSpace = true;
     public bool touchingSpace = false;
-    public bool minigameLoaded = false;
 
     public GameObject triggerCanvas;
 
@@ -52,7 +51,6 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     {
         // prevent multiple loads
         canLoadScene = false;
-        minigameLoaded = true;
         if (eventSystem != null)
         {
             eventSystem.enabled = false;
@@ -60,39 +58,15 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
         GameObject localPlayer = GetLocalPlayer();
         if (localPlayer != null)
         {
-            var movement = localPlayer.GetComponent<PlayerMovement>();
-            if (movement != null)
-            {
-                movement.enabled = false;
-                movement.playerTyping = false; // Ensure chat can't be opened
-            }
+            PausePlayerMovement(localPlayer);
             yield return StartCoroutine(LoadMinigameAsync());
         }
         else
         {
             Debug.LogWarning("Local player not found");
         }
-    
+        
         canLoadScene = true;
-    }
-
-    public void OnMinigameUnloaded()
-    {
-        minigameLoaded = false;
-        if (eventSystem != null)
-        {
-            eventSystem.enabled = true;
-        }
-    
-        GameObject localPlayer = GetLocalPlayer();
-        if (localPlayer != null)
-        {
-            var movement = localPlayer.GetComponent<PlayerMovement>();
-            if (movement != null)
-            {
-                movement.enabled = true;
-            }
-        }
     }
 
     private GameObject GetLocalPlayer()
