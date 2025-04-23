@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
     public bool canMove = true;
     public bool playerTyping = false;
+    private Vector2 lastMove;
 
     private CustomizePlayer customization;
     private PlayerInventory inventory;
@@ -83,23 +84,33 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             inventoryCanvas.SetActive(!inventoryCanvas.activeInHierarchy);
 
             if (inventoryCanvas.activeInHierarchy) {
+                moveInput = new Vector2(0, 0); 
                 canMove = false;
+                
             } else
             {
                 canMove = true;
             }
         }
 
-        if (!canMove) return;
+        if (canMove)
+        {
+            moveInput.x = Input.GetAxisRaw("Horizontal");
+            moveInput.y = Input.GetAxisRaw("Vertical");
 
-        moveInput.x = Input.GetAxisRaw("Horizontal");
-        moveInput.y = Input.GetAxisRaw("Vertical");
+            moveInput.Normalize(); // Ensures diagonal movement isn't faster
+        }
 
-        moveInput.Normalize(); // Ensures diagonal movement isn't faster
+        if (moveInput != lastMove)
+        {
+            photonView.RPC("AnimationDirection", RpcTarget.Others, moveInput);
+            AnimationDirection(moveInput);
+            lastMove = moveInput;
+        }
 
-        photonView.RPC("AnimationDirection", RpcTarget.Others, moveInput);
+        //photonView.RPC("AnimationDirection", RpcTarget.Others, moveInput);
 
-        AnimationDirection(moveInput);
+        //AnimationDirection(moveInput);
     }
 
     void FixedUpdate()
@@ -193,7 +204,7 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     [PunRPC]
     public void AnimationDirection(Vector2 move)
     {
-        // this is going to be shrunk down & placed in its own function
+        // this is going to be shrunk down
         // just have it like this to test the separate animators
         if (move.y > 0)
         {
