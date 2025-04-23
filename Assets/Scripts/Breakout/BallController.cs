@@ -31,6 +31,7 @@ public class BallController : MonoBehaviour
             collision.gameObject.CompareTag("Paddle") || 
             collision.gameObject.CompareTag("Brick"))
         {
+            Debug.Log("ball collide");
             // Maintain constant speed while bouncing
             float currentSpeed = lastVelocity.magnitude;
             Vector2 direction = Vector2.Reflect(lastVelocity.normalized, collision.contacts[0].normal);

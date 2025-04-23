@@ -97,37 +97,9 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
 
         moveInput.Normalize(); // Ensures diagonal movement isn't faster
 
-        // this is going to be shrunk down & placed in its own function
-        // just have it like this to test the separate animators
-        if (moveInput.y > 0)
-        {
-            playerAnimator.SetInteger("facing", 1);
-            eyePatchAnimator.SetInteger("facing", 1);
-            clownHatAnimator.SetInteger("facing", 1);
-        }
-        else if (moveInput.y < 0)
-        {
-            playerAnimator.SetInteger("facing", 2);
-            eyePatchAnimator.SetInteger("facing", 2);
-            clownHatAnimator.SetInteger("facing", 2);
-        }
-        else if (moveInput.x > 0)
-        {
-            playerAnimator.SetInteger("facing", 3);
-            eyePatchAnimator.SetInteger("facing", 3);
-            clownHatAnimator.SetInteger("facing", 3);
-        }
-        else if (moveInput.x < 0)
-        {
-            playerAnimator.SetInteger("facing", 4);
-            eyePatchAnimator.SetInteger("facing", 4);
-            clownHatAnimator.SetInteger("facing", 4);
-        } else
-        {
-            playerAnimator.SetInteger("facing", 0);
-            eyePatchAnimator.SetInteger("facing", 0);
-            clownHatAnimator.SetInteger("facing", 0);
-        }
+        photonView.RPC("AnimationDirection", RpcTarget.Others, moveInput);
+
+        AnimationDirection(moveInput);
     }
 
     void FixedUpdate()
@@ -216,6 +188,43 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         GameObject bubble = Instantiate(popupBubble, position, Quaternion.identity);
         PopupBubble popup = bubble.GetComponent<PopupBubble>();
         popup.Show(message);
+    }
+
+    [PunRPC]
+    public void AnimationDirection(Vector2 move)
+    {
+        // this is going to be shrunk down & placed in its own function
+        // just have it like this to test the separate animators
+        if (move.y > 0)
+        {
+            playerAnimator.SetInteger("facing", 1);
+            eyePatchAnimator.SetInteger("facing", 1);
+            clownHatAnimator.SetInteger("facing", 1);
+        }
+        else if (move.y < 0)
+        {
+            playerAnimator.SetInteger("facing", 2);
+            eyePatchAnimator.SetInteger("facing", 2);
+            clownHatAnimator.SetInteger("facing", 2);
+        }
+        else if (move.x > 0)
+        {
+            playerAnimator.SetInteger("facing", 3);
+            eyePatchAnimator.SetInteger("facing", 3);
+            clownHatAnimator.SetInteger("facing", 3);
+        }
+        else if (move.x < 0)
+        {
+            playerAnimator.SetInteger("facing", 4);
+            eyePatchAnimator.SetInteger("facing", 4);
+            clownHatAnimator.SetInteger("facing", 4);
+        }
+        else
+        {
+            playerAnimator.SetInteger("facing", 0);
+            eyePatchAnimator.SetInteger("facing", 0);
+            clownHatAnimator.SetInteger("facing", 0);
+        }
     }
 
 }
