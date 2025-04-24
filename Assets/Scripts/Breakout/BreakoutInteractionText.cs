@@ -1,30 +1,32 @@
 using UnityEngine;
+using Photon.Pun;
 
 public class BreakoutInteractionText : MonoBehaviour
 {
     public GameObject interactionUI; 
-    public static BreakoutInteractionText Instance;
-    public bool touchingSpace;
+    private bool touchingSpace;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         touchingSpace = false;
-        Instance = this;
+        if (!GetComponentInParent<PhotonView>().IsMine)
+        {
+            if (interactionUI != null) interactionUI.SetActive(false);
+            enabled = false; // Disable this script entirely for non-local players
+            return;
+        }
 
         if (interactionUI != null) {
             interactionUI.SetActive(false);
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SetTouchingSpace(bool isTouching)
     {
-        if (touchingSpace == true) {
-            interactionUI.SetActive(true);
-        }
-        else if (touchingSpace == false) {
-            interactionUI.SetActive(false);
+        touchingSpace = isTouching;
+        if (interactionUI != null) {
+            interactionUI.SetActive(isTouching);
         }
     }
 }

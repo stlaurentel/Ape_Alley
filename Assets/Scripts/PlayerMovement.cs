@@ -167,10 +167,15 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
         }
         
         if (other.CompareTag("BreakoutSpace")) {
-            BreakoutMinigameTrigger.Instance.touchingSpace = true;
-            Debug.Log("Touching BreakoutSpace");
+            BreakoutMinigameTrigger trigger = other.GetComponent<BreakoutMinigameTrigger>();
+            if (trigger != null && photonView.IsMine) {
+                trigger.SetTouchingSpace(true);
+                Debug.Log("Touching BreakoutSpace");
 
-            BreakoutMinigameTrigger.Instance.triggerCanvas.SetActive(true);
+                if (trigger.triggerCanvas != null) {
+                    trigger.triggerCanvas.SetActive(true);
+                }
+            }
         }
     }
 
@@ -181,8 +186,15 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
             Debug.Log("Player left the door.");
         }
         if (other.CompareTag("BreakoutSpace")) {
-            BreakoutMinigameTrigger.Instance.touchingSpace = false;
-            Debug.Log("Off BreakoutSpace");
+            BreakoutMinigameTrigger trigger = other.GetComponent<BreakoutMinigameTrigger>();
+            if (trigger != null && photonView.IsMine) {
+                trigger.SetTouchingSpace(false);
+                Debug.Log("Off BreakoutSpace");
+
+                if (trigger.triggerCanvas != null) {
+                    trigger.triggerCanvas.SetActive(false);
+                }
+            }
         }
     }
 

@@ -9,14 +9,18 @@ public class BreakoutUI : MonoBehaviour
     public string minigameSceneName = "BreakoutMinigame";
 
     public Text gameOverText;
-
+    private BreakoutMinigameTrigger minigameTrigger;
     private bool gameEnd = false;
     private bool gameWin = false;
+
+    public void SetMinigameTrigger(BreakoutMinigameTrigger trigger) {
+        minigameTrigger = trigger;
+    }
 
     public void QuitMinigame() {
         SceneManager.UnloadSceneAsync(minigameSceneName);
         ResumePlayerMovement();
-        BreakoutMinigameTrigger.Instance.canClickSpace = true;
+        minigameTrigger.canClickSpace = true;
         Debug.Log("canClickSpace = true");
     }
 

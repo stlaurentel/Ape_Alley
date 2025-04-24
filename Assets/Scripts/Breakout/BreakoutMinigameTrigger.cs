@@ -6,19 +6,22 @@ using System.Collections;
 
 public class BreakoutMinigameTrigger : MonoBehaviourPun
 {
-    public static BreakoutMinigameTrigger Instance;
     public string minigameSceneName = "BreakoutMinigame";
     private EventSystem eventSystem;
     private GameObject localPlayer;
     private bool canLoadScene = true;
     public bool canClickSpace = true;
-    public bool touchingSpace = false;
+    private bool touchingSpace = false;
 
     public GameObject triggerCanvas;
 
     void Start()
     {   
-        Instance = this;
+        if (triggerCanvas != null)
+        {
+            triggerCanvas.SetActive(false);
+        }
+        
         // get local playerobject
         localPlayer = GameObject.FindGameObjectWithTag("Player");
         if (localPlayer == null) {
@@ -39,11 +42,24 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
             canClickSpace = false;
             StartCoroutine(StartGameRoutine());
         }
+    }
 
-        if (triggerCanvas.activeInHierarchy && !touchingSpace)
+    public void SetTouchingSpace(bool touching)
+    {
+        touchingSpace = touching;
+        
+        if (triggerCanvas == null)
         {
-            triggerCanvas.SetActive(false);
+            Debug.LogWarning("TriggerCanvas reference is null!", this);
+            return;
         }
+
+        triggerCanvas.SetActive(touching);
+    }
+
+    public bool IsTouchingSpace()
+    {
+        return touchingSpace;
     }
 
 
@@ -101,7 +117,19 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
         }
 
         // set new scene as active
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(minigameSceneName));
+        Scene minigameScene = SceneManager.GetSceneByName(minigameSceneName);
+        SceneManager.SetActiveScene(minigameScene);
+
+        GameObject[] objects = minigameScene.GetRootGameObjects();
+        foreach (GameObject obj in objects)
+        {
+            BreakoutUI ui = obj.GetComponentInChildren<BreakoutUI>();
+            if (ui != null)
+            {
+                ui.SetMinigameTrigger(this);
+                break;
+            }
+        }
     }
 
     private void PausePlayerMovement(GameObject player) {
