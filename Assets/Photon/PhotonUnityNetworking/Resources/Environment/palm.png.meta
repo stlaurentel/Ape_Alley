@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7e97a65443dd6314c9b9354ae9f155c3
+guid: 5bfe34e4dd2ffc340965a028f7fc93b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4422728435077204189
-    second: monkey-map-1-transparent_0
+      213: 7911854989986141159
+    second: palm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -48,7 +48,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 0
+  spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -113,23 +113,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: monkey-map-1-transparent_0
+      name: palm_0
       rect:
         serializedVersion: 2
-        x: 37
-        y: 14
-        width: 3189
-        height: 2469
+        x: 19
+        y: 102
+        width: 328
+        height: 362
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3273431cbef4f92c0800000000000000
-      internalID: -4422728435077204189
+      spriteID: 7e39680d13e8ccd60800000000000000
+      internalID: 7911854989986141159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: palm_1
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 46
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c21c16c19abae1a4cba0cfc865b7ab4c
+      internalID: 2075539487
       vertices: []
       indices: 
       edges: []
@@ -138,7 +160,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a37cd3ca1a2b2614e8678fcb2db11862
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +170,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      monkey-map-1-transparent_0: -4422728435077204189
+      palm_0: 7911854989986141159
+      palm_1: 2075539487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
