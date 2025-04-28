@@ -263,8 +263,8 @@ public class ChatManager : MonoBehaviourPunCallbacks
     // Split the existing text into lines
     string[] lines = chatLogText.text.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
     
-    // Keep max 14 lines (excluding empty lines)
-    const int maxLines = 14;
+    // Keep max 7 lines (excluding empty lines)
+    const int maxLines = 7;
     if (lines.Length >= maxLines)
     {
         // Remove the oldest line (index 0) while preserving the empty line if it exists
