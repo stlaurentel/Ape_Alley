@@ -25,6 +25,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
     // Runtime variables
     private GameObject chatInstance;
     private bool isChatOpen = false;
+    public bool canChat = true;
 
     private void Awake() 
     {
@@ -87,7 +88,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
     private void UpdateTypingPrompt(string currentText)
     {
-        if (!isChatOpen || chatPrompt == null) return;
+        if (!isChatOpen || chatPrompt == null || !canChat) return;
         TMP_Text promptText = chatPrompt.GetComponent<TMP_Text>();
     
         if (currentText.StartsWith("/"))
@@ -106,7 +107,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
         // Open chat with / key
         if ((Input.GetKeyDown(KeyCode.Slash) || 
-             Input.GetKeyDown(KeyCode.Backslash)) && !isChatOpen)
+             Input.GetKeyDown(KeyCode.Backslash)) && !isChatOpen && canChat)
         {
             OpenChat();
         }
@@ -126,7 +127,7 @@ public class ChatManager : MonoBehaviourPunCallbacks
 
     private void OpenChat()
     {
-        if (!photonView.IsMine || chatInput == null || chatPrompt == null) return;
+        if (!photonView.IsMine || chatInput == null || chatPrompt == null || !canChat) return;
     
         isChatOpen = true;
         chatInput.gameObject.SetActive(true);

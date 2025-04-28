@@ -28,6 +28,7 @@ public class MinigameUI : MonoBehaviour
         GameObject localPlayer = GameObject.FindGameObjectWithTag("Player");
         if (localPlayer != null && localPlayer.GetComponent<PhotonView>().IsMine) {
             localPlayer.GetComponent<PlayerMovement>().enabled = true;
+            localPlayer.GetComponent<ChatManager>().canChat = true;
         }
     }
 

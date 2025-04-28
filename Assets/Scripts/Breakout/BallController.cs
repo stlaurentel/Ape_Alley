@@ -27,7 +27,8 @@ public class BallController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Wall") || 
+        Debug.Log("collide w/ " + collision.gameObject.tag);
+        if (collision.gameObject.CompareTag("Obstacle") || 
             collision.gameObject.CompareTag("Paddle") || 
             collision.gameObject.CompareTag("Brick"))
         {

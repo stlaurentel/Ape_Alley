@@ -67,10 +67,13 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     {
         // prevent multiple loads
         canLoadScene = false;
-        if (eventSystem != null)
-        {
-            eventSystem.enabled = false;
-        }
+
+        // BAD! THIS BREAKS LITERALLY EVERYTHING PERMANENTLY!!!!!!!
+        //if (eventSystem != null)
+        //{
+        //    eventSystem.enabled = false;
+        //}
+
         GameObject localPlayer = GetLocalPlayer();
         if (localPlayer != null)
         {
@@ -135,12 +138,7 @@ public class BreakoutMinigameTrigger : MonoBehaviourPun
     private void PausePlayerMovement(GameObject player) {
         // Disable player movement and/or other scripts
         player.GetComponent<PlayerMovement>().enabled = false;
-    }
-
-    void onDestroy() {
-        if (eventSystem != null) {
-            eventSystem.enabled = true;
-        }
+        player.GetComponent<ChatManager>().canChat = false;
     }
 
    

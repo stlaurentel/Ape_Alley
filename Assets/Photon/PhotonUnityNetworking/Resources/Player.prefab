@@ -516,6 +516,7 @@ MonoBehaviour:
   chatCanvasPrefab: {fileID: 1570893667838764170, guid: 746c17d68c8f0f846adb2119345780a1, type: 3}
   messageBubblePrefab: {fileID: 231910612334105126, guid: 0d56c744c98b53b4b8e382dc0d29f73b, type: 3}
   messageBubbleDuration: 3
+  canChat: 1
 --- !u!1 &3008252620770591068
 GameObject:
   m_ObjectHideFlags: 0

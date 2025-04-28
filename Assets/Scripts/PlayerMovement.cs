@@ -71,13 +71,13 @@ public class PlayerMovement : MonoBehaviourPunCallbacks
     void Update()
     {
         var ePress = Input.GetKeyDown(KeyCode.E);
-        var oPress = Input.GetKeyDown(KeyCode.O);
+        //var oPress = Input.GetKeyDown(KeyCode.O);
 
-        if (oPress && EyewearSlot != null)
-        {
-            EyewearSlot.SetActive(!EyewearSlot.activeInHierarchy);
-            customization.ToggleEyepatch();
-        }
+        //if (oPress && EyewearSlot != null)
+        //{
+        //    EyewearSlot.SetActive(!EyewearSlot.activeInHierarchy);
+        //    customization.ToggleEyepatch();
+        //}
 
         if (ePress && !(playerTyping))
         {
