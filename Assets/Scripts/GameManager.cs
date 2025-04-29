@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     // Custom property keys
     private const string PLAYER_LOADED_LEVEL = "PlayerLoadedLevel";
+    private const string PROP_EYEPATCH = "EyepatchOn";
+    private const string PROP_CLOWNHAT = "ClownHatOn";
 
     void Awake()
     {
@@ -66,7 +68,9 @@ public class GameManager : MonoBehaviourPunCallbacks
         // Set a custom property to indicate player is loaded and ready
         ExitGames.Client.Photon.Hashtable props = new ExitGames.Client.Photon.Hashtable
         {
-            {PLAYER_LOADED_LEVEL, true}
+            {PLAYER_LOADED_LEVEL, true},
+            { PROP_EYEPATCH, false },
+            { PROP_CLOWNHAT, false }
         };
         PhotonNetwork.LocalPlayer.SetCustomProperties(props);
     }

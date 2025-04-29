@@ -6,7 +6,7 @@ public class PlayerInventory : MonoBehaviour
     //public GameObject itemSlot;
     public ItemSlot[] itemSlot;
 
-    public bool hasEyepatch = true;
+    public bool hasEyepatch = false;
     public bool hasClownHat = false;
 
 

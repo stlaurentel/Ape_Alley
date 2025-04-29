@@ -6,26 +6,17 @@ using UnityEngine.EventSystems;
 public class ItemSlot : MonoBehaviour, IPointerClickHandler
 {
     public string itemName;
-    //public Sprite sprite;
     public bool isFull = false;
+    public bool selected = false;
 
     public Image image;
-
     public GameObject selectedShader;
-    public bool selected = false;
 
     public CustomizePlayer customizePlayer;
 
-    void Start()
-    {
-        
-    }
-
     public void AddItem(string name, Sprite sprite)
     {
-        //this.name = name;
         itemName = name;
-        //this.sprite = sprite;
         image.sprite = sprite;
         isFull = true;
     }
@@ -36,18 +27,17 @@ public class ItemSlot : MonoBehaviour, IPointerClickHandler
         if (eventData.button == PointerEventData.InputButton.Left && isFull)
         {
             Debug.Log("Selecting");
-            if (!selected)
+            if (selectedShader.activeInHierarchy)
             {
-                customizePlayer.inventory.DeselectAll();
-                selectedShader.SetActive(true);
+                selected = false;
+                selectedShader.SetActive(false);
+            } else
+            {
                 selected = true;
-                EquipItem();
+                selectedShader.SetActive(true);
             }
-            else
-            {
-                customizePlayer.inventory.DeselectAll();
-                EquipItem();
-            }
+
+            EquipItem();
 
         }
     }
