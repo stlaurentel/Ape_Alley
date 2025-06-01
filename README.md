@@ -27,9 +27,9 @@
 
 ## 🎥 Demo
 
-📺 [Watch our trailer! (YouTube link)](https://youtu.be/your-demo-link-here)  
-🕹️ [Play on itch.io](https://your-itch-page.itch.io/ape-alley) 
-OR 🕹️ Download on Steam! (Coming soon)
+📺 [Watch our trailer! (YouTube link)](https://youtube.com/watch?v=tn-lsZaX9Sk)  
+🕹️ [Download on itch.io](https://niverson.itch.io/ape-alley)
+OR 🕹️ Play on Steam! (Coming soon)
 
 ---
 
