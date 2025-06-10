@@ -29,7 +29,6 @@
 
 📺 [Watch our trailer! (YouTube link)](https://youtube.com/watch?v=tn-lsZaX9Sk)  
 🕹️ [Download on itch.io](https://niverson.itch.io/ape-alley)
-OR 🕹️ Play on Steam! (Coming soon)
 
 ---
 
